@@ -183,7 +183,7 @@ Depois de ter os documentos armazenados, você pode usar a Pesquisa de IA do Azu
     - Executa o conjunto de habilidades cognitivas para gerar mais campos enriquecidos.
     - Mapeia os campos extraídos para o índice.
 
-1. Na metade inferior da página **Visão geral** do seu recurso da Pesquisa de IA do Azure, selecione a guia **Indexadores**. Essa guia mostra o **coffee-indexer** recém-criado. Aguarde um minuto e selecione **&orarr;Atualizar** até que o **Status** indique êxito.
+1. Retorne à página de recursos da Pesquisa de IA do Azure. No painel esquerdo, em **Gerenciamento de Pesquisa**, selecione  **Indexadores**. Essa guia mostra o **indexador de café** recém-criado. Aguarde um minuto e selecione **&orarr;Atualizar** até que o **Status** indique êxito.
 
 1. Selecione o nome do indexador para ver mais detalhes.
 
@@ -197,21 +197,40 @@ Use o Gerenciador de pesquisa para escrever e testar as consultas. O Gerenciador
 
    ![Captura de tela de como localizar o Gerenciador de pesquisa.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. Observe como o índice selecionado é o *coffee-indexer* que você criou.
+2. Observe como o índice selecionado é o *coffee-indexer* que você criou. Abaixo do índice selecionado, altere a *exibição* para o **modo de exibição JSON**. 
 
     ![Captura de tela do Gerenciador de pesquisa.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    No campo **Cadeia de caracteres de consulta**, insira `search=*&$count=true` e selecione **Pesquisar**. A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo **@odata.count**. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
+No campo **editor de consultas JSON**, copie e cole: 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+3. Selecione **Pesquisar**. A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo **@odata.count**. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
 
-    > **Observação** Se aparecer uma mensagem **Para pesquisar no portal, permita a origem do portal nas configurações de CORS do índice**, selecione **Permitir portal** e depois **Pesquisar**.
+4. Agora, vamos filtrar por localização. No campo **editor de consultas JSON**, copie e cole: 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+5. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra as análises com uma localização de Chicago. Você deve ver `3` no campo `@odata.count`.
 
-1. Agora, vamos filtrar por localização. Insira `search=locations:'Chicago'` no campo **Cadeia de caracteres de consulta** e selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra as análises com uma localização de Chicago.
-
-1. Agora, vamos filtrar por sentimento. Insira `search=sentiment:'negative'` no campo **Cadeia de caracteres de consulta** e selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra as análises com um sentimento negativo.
+6. Agora, vamos filtrar por sentimento. No campo **editor de consultas JSON**, copie e cole: 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+7. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra as análises com um sentimento negativo. Você deve ver `1` no campo `@odata.count`.
 
    > **Observação** Veja como os resultados são classificados por `@search.score`. Essa é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quanto os resultados correspondem à consulta fornecida.
 
-1. Um dos problemas que queremos resolver é o motivo pelo qual pode haver determinadas avaliações. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. Qual você acha que pode ser a causa da avaliação?
+8. Um dos problemas que queremos resolver é o motivo pelo qual pode haver determinadas avaliações. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. Qual você acha que pode ser a causa da avaliação?
 
 ## Revisar o repositório de conhecimento
 
@@ -219,36 +238,36 @@ Por fim, vejamos o poder do repositório de conhecimento em ação. Quando você
 
 1. No portal do Azure, navegue de volta para a conta de armazenamento do Azure.
 
-1. No painel de menu à esquerda, selecione **Contêineres**. Selecione o contêiner **knowledge-store**.
+2. No painel de menu à esquerda, selecione **Contêineres**. Selecione o contêiner **knowledge-store**.
 
     ![Captura de tela do contêiner do repositório de conhecimento.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
+3. Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
 
     ![Captura de tela do objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. Selecione **Editar** para ver o JSON produzido por um dos documentos do seu armazenamento de dados do Azure.
+4. Selecione **Editar** para ver o JSON produzido por um dos documentos do seu armazenamento de dados do Azure.
 
     ![Captura de tela de como encontrar o botão Editar.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. Selecione a trilha do blob de armazenamento no canto superior esquerdo da tela para retornar aos *Contêineres* da conta de armazenamento.
+5. Selecione a trilha do blob de armazenamento no canto superior esquerdo da tela para retornar aos *Contêineres* da conta de armazenamento.
 
     ![Captura de tela da barra de trilha do blob de armazenamento.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. Em *Contêineres*, selecione o contêiner *coffee-skillset-image-projection*. Selecione um dos itens.
+6. Em *Contêineres*, selecione o contêiner *coffee-skillset-image-projection*. Selecione um dos itens.
 
     ![Captura de tela do contêiner do conjunto de habilidades.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. Selecione qualquer um dos arquivos *.jpg*. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
+7. Selecione qualquer um dos arquivos *.jpg*. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
 
     ![Captura de tela da imagem salva.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. Selecione a trilha do blob de armazenamento no canto superior esquerdo da tela para retornar aos *Contêineres* da conta de armazenamento.
+8. Selecione a trilha do blob de armazenamento no canto superior esquerdo da tela para retornar aos *Contêineres* da conta de armazenamento.
 
-1. Selecione **Navegador de armazenamento** no painel à esquerda e escolha **Tabelas**. Há uma tabela para cada entidade no índice. Selecione a tabela *coffeeSkillsetKeyPhrases*.
+9. Selecione **Navegador de armazenamento** no painel à esquerda e escolha **Tabelas**. Há uma tabela para cada entidade no índice. Selecione a tabela *coffeeSkillsetKeyPhrases*.
 
     Confira as frases-chave que o repositório de conhecimento conseguiu capturar do conteúdo nas avaliações. Muitos dos campos são chaves, então é possível vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
 
 ## Saiba mais
 
-Esse índice de pesquisa simples apresenta apenas algumas das funcionalidades do serviço Pesquisa de IA do Azure. Para saber mais sobre o que você pode fazer com esse serviço, confira a página do serviço [Pesquisa de IA do Azure](/azure/search/search-what-is-azure-search).
+Esse índice de pesquisa simples apresenta apenas algumas das funcionalidades do serviço Pesquisa de IA do Azure. Para saber mais sobre o que você pode fazer com esse serviço, confira a página do serviço [Pesquisa de IA do Azure](https://learn.microsoft.com/azure/search).
