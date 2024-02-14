@@ -29,7 +29,7 @@ Neste exercício, você criará um recurso de Fala de IA, a menos que já tenha 
 
 1. Selecione [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) para baixar **speech.zip**. Abra a pasta . 
 
-1. Na página Introdução à Fala, em *Fala*, encontre *Conversão de fala em texto em tempo real*. Selecione **Experimente a conversão de fala em texto em tempo real**.
+1. Na página Introdução à Fala, em *Conversão de fala em texto*, localize *Conversão de fala em texto em tempo real*. Selecione **Experimente a conversão de fala em texto em tempo real**.
 
     ![Introdução à Fala](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
@@ -46,10 +46,10 @@ Neste exercício, você criou um recurso de Fala de IA no Speech Studio. Em segu
 
 ## Limpeza
 
-Se você não pretende fazer mais exercícios, exclua todos os recursos que você não precisa mais. Isso evita o acúmulo de custos desnecessários.
+Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita o acúmulo de custos desnecessários.
 
-1. Abra o [portal do Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou.
-1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1. Abra o [portal do Microsoft Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou.
+1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
 
 ## Saiba mais
 
