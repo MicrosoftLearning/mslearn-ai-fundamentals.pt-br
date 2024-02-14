@@ -36,7 +36,7 @@ Mantenha o Estúdio de Informação de Documentos aberto.
 Agora você está pronto para analisar um recibo da empresa fictícia de varejo Northwind Traders.
 
 1. Selecione [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) para baixar um documento de amostra para o seu computador. Abra a pasta . 
-1. Selecione o **Estúdio de Reconhecimento de Formulários** para voltar à página **Comece a usar o Estúdio de Informação de Documentos** e, em Recibos, selecione **Experimentar**.
+1. Selecione o **Estúdio de Informação de Documentos** para voltar à página **Comece a usar o Estúdio de Informação de Documentos** e, em Recibos, selecione **Experimentar**.
 1. Na lista suspensa Predefinido, certifique-se de que **Recibos** esteja selecionado.
 1. Selecione **Procurar arquivos** e navegue até a pasta em que a imagem foi salva. Selecione a imagem do recibo e, em seguida, **Abrir**. A imagem aparece no lado esquerdo da tela.
 
