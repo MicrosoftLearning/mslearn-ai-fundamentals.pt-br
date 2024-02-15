@@ -73,7 +73,7 @@ Em seguida, conecte o recurso dos serviços de IA do Azure que você provisionou
 
     ![Uma imagem de pessoas em uma loja com uma planta ocultando um rosto.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. Carregue **store-camera-2.jpg** e examine os detalhes de detecção facial retornados. Observe como a Detecção Facial de IA do Azure pode detectar rostos parcialmente obscurecidos. 
+1. Carregue **store-camera-3.jpg** e examine os detalhes de detecção facial retornados. Observe como a Detecção Facial da IA do Azure não detectou o rosto que está obscurecido.
 
 Neste exercício, você explorou como os serviços de IA do Azure podem detectar rostos em imagens. Se você tiver tempo, fique à vontade para experimentar as imagens de exemplo ou algumas de suas próprias imagens.
 
