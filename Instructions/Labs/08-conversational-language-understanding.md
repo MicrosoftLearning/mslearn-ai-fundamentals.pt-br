@@ -11,19 +11,19 @@ Neste exercício, você usará o Language Studio para criar e testar um projeto 
 
 ## Criar um recurso de *Linguagem*
 
-Você pode usar muitos recursos da Linguagem de IA do Azure com um recurso **Linguagem** ou **serviços de IA do Azure**. Há algumas instâncias em que apenas um recurso de Linguagem pode ser usado. Para o exercício abaixo, usaremos um recurso de **Linguagem**. Caso ainda não tenha feito isso, crie um recurso de **Linguagem** em sua assinatura do Azure.
+Você pode usar muitos recursos da Linguagem de IA do Azure com um recurso **Linguagem** ou **serviços de IA do Azure**. Em alguns casos, somente um recurso de idioma pode ser usado. Para o exercício abaixo, usaremos um recurso **Linguagem**. Caso ainda não tenha feito isso, crie um recurso de **Linguagem** em sua assinatura do Azure.
 
-1. Em outra guia do navegador, abra o portal do Azure em [https://portal.azure.com](https://portal.azure.com?azure-portal=true) e entre com a conta Microsoft associada à sua assinatura do Azure.
+1. Em outra guia do navegador, abra o portal do Azure em [https://portal.azure.com](https://portal.azure.com?azure-portal=true), entrando com a conta da Microsoft associada à sua assinatura do Azure.
 
 1. Clique no botão **&#65291;Criar um recurso** e pesquise *Serviço de linguagem*. Selecione **criar** um plano do **Serviço de Linguagem**. Você será levado para uma página para *Selecionar recursos adicionais**. Mantenha a seleção padrão e clique em **Continuar para criar seu recurso**. 
 
-1. Na página **Criar Linguagem**, use as seguintes configurações:
+1. Na página **Criar idioma**, configure-o com as seguintes definições:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: Leste dos EUA.
+    - **Região**: Leste dos EUA.
     - **Nome**: *insira um nome exclusivo*.
-    - **Tipo de preço**: *F0 Gratuito ou S se F0 Gratuito não estiver disponível*
-    - **Ao marcar a caixa Confirmo que li e compreendi todos os termos abaixo**: *Selecionado*.
+    - **Tipo de preço**: *F0 Gratuito ou S se o F0 Gratuito não estiver disponível*
+    - **Ao marcar esta caixa, reconheço que li e compreendi todos os termos abaixo**: *Selecionado*.
 
 1. Selecione **Examinar + criar** e, em seguida, **Criar** e aguarde a conclusão da implantação.
 
@@ -171,7 +171,7 @@ Agora você configurou com êxito um projeto de linguagem coloquial e definiu en
 
 ## Limpeza
 
-Se você não pretende fazer mais exercícios, exclua todos os recursos de que você não precisa mais. Isso evita a geração de custos desnecessários.
+Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita a geração de custos desnecessários.
 
 1. Abra o [portal do Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou. 1. Selecione o recurso e escolha **Excluir** e, em seguida, **Sim** para confirmar. Assim, o recurso é excluído.
 

@@ -19,7 +19,7 @@ Para usar a resposta às perguntas, você precisa de um recurso de **Linguagem**
 
 1. Em outra guia do navegador, abra o portal do Azure em [https://portal.azure.com](https://portal.azure.com?azure-portal=true), entrando com a conta Microsoft associada à sua assinatura do Azure.
 
-1. Clique no botão **&#65291;Criar um recurso** e pesquise *Serviços Cognitivos*. Selecione **criar** um plano de **serviço de Linguagem** . Você será levado para uma página para **Selecionar recursos adicionais**. Use as configurações a seguir:
+1. Clique no botão **&#65291;Criar um recurso** e pesquise *Serviço de linguagem*. Selecione **criar** um plano **Serviço de linguagem**. Você será levado para uma página para **Selecionar recursos adicionais**. Use as configurações a seguir:
     - **Selecione os Recursos Adicionais**:
         - **Recursos padrão**: *mantenha os recursos padrão*.
         - **Recursos personalizados**: *selecione a opção respostas às perguntas personalizadas*.
@@ -50,7 +50,7 @@ Para usar a resposta às perguntas, você precisa de um recurso de **Linguagem**
 1. Se for solicitado a escolher um recurso de idioma, selecione as seguintes configurações:
     - **Diretório do Azure**: *O diretório do Azure que contém a sua assinatura*.
     - **Assinatura do Azure**: *sua assinatura do Azure*.
-    - **Recurso de Linguagem**: *O recurso de Linguagem que você criou anteriormente*.
+    - **Recurso de Linguagem**: *O recurso de Linguagem que você criou anteriormente.*
 
     Se você ***não*** foi solicitado a escolher um recurso de idioma, pode ser porque você tem vários recursos de idioma em sua assinatura; nesse caso:
     1. Na barra na parte superior da página, selecione **Configurações (&#9881;)**.      
@@ -155,10 +155,10 @@ Faça experimentos com o bot. Provavelmente, você verá que ele pode responder 
 
 ## Limpeza
 
-Se você não pretende fazer mais exercícios, exclua todos os recursos que você não precisa mais. Isso evita o acúmulo de custos desnecessários.
+Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita o acúmulo de custos desnecessários.
 
-1. Abra o [portal do Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou. 
-1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1. Abra o [portal do Microsoft Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou. 
+1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
 
 ## Saiba mais
 

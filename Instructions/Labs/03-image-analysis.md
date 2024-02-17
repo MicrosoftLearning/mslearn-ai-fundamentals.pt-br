@@ -18,10 +18,10 @@ Você pode usar os recursos de análise de imagem da Visão de IA do Azure com u
 1. Clique no botão **&#65291;Criar um recurso** e pesquise por *serviços de IA do Azure*. Selecione **criar** um plano dos **serviços de IA do Azure**. Você será levado para uma página para criar um recurso dos serviços de IA do Azure. Defina-o com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: Leste dos EUA.
+    - **Região**: Leste dos EUA.
     - **Nome**: *insira um nome exclusivo*.
-    - **Tipo de preço**: *Sistema operacional Padrão*
-    - **Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo**: **Selecionado**
+    - **Tipo de preço**: *Standard S0.*
+    - **Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo**: *Selecionado*.
 
 1. Selecione **Examinar + criar** e, em seguida, **Criar** e aguarde a conclusão da implantação.
 
@@ -33,15 +33,15 @@ Em seguida, conecte o recurso do Serviço de IA do Azure que você provisionou a
 
 1. Entre com sua conta e verifique se você está usando o mesmo diretório que aquele em que criou o recurso dos Serviços de IA do Azure.
 
-1. Na home page do Vision Studio, selecione **Exibir todos os recursos** no título**Introdução à Visão**.
+1. Na página inicial do Vision Studio, selecione **Exibir todos os recursos** no título **Introdução ao Vision**.
 
     ![O link Exibir todos os recursos é realçado em Introdução à Visão no Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
 1. Na página **Selecionar um recurso para trabalhar**, passe o cursor do mouse sobre o recurso criado acima na lista e marque a caixa à esquerda do nome do recurso e selecione **Selecionar como recurso padrão**.
 
-    > **Observação**: Se o recurso não estiver listado, talvez seja necessário **Atualizar** a página.
+    > **Observação**: Se o recurso não foi listado, talvez seja necessário **Atualizar** a página.
 
-    ![O recurso Selecionar um recurso para trabalhar com a caixa de diálogo é exibido com o recurso cog-ms-learn-vision-SUFFIX dos Serviços Cognitivos realçado e verificado. O botão Selecionar como recurso padrão está realçado.](./media/analyze-images-vision/default-resource.png)
+    ![A caixa de diálogo Selecionar um recurso para trabalhar é exibida com o recurso dos Serviços Cognitivos cog-ms-learn-vision-SUFFIX realçado e verificado. O botão Selecionar como recurso padrão está realçado.](./media/analyze-images-vision/default-resource.png)
 
 1. Feche a página de configurações selecionando o "x" na parte superior direita da tela.
 
@@ -119,10 +119,10 @@ Nessa tarefa, você usará o recurso de **Detecção de objeto** da Análise de 
 
 ## Limpeza
 
-Se você não pretende fazer mais exercícios, exclua todos os recursos que você não precisa mais. Isso evita o acúmulo de custos desnecessários.
+Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita o acúmulo de custos desnecessários.
 
-1.  Abra o [portal do Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou. 
-1.  Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1.  Abra o [portal do Microsoft Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou. 
+1.  Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
 
 ## Saiba mais
 
