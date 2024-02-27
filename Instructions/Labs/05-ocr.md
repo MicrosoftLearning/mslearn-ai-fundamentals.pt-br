@@ -18,7 +18,7 @@ Você pode usar os recursos do OCR da Visão de IA do Azure com um recurso de v�
 1. Clique no botão **&#65291;Criar um recurso** e pesquise por *serviços de IA do Azure*. Selecione **criar** um plano dos **serviços de IA do Azure**. Você será levado para uma página para criar um recurso dos serviços de IA do Azure. Defina-o com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: Leste dos EUA.
+    - **Região**: Leste dos EUA.
     - **Nome**: *insira um nome exclusivo*.
     - **Tipo de preço**: *Standard S0.*
     - **Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo**: *Selecionado*.
@@ -61,7 +61,7 @@ Em seguida, conecte o recurso dos serviços de IA do Azure que você provisionou
     - Em **Atributos detectados**, qualquer texto encontrado na imagem é organizado em uma estrutura hierárquica de regiões, linhas e palavras.
     - Na imagem, o local do texto é indicado por uma caixa delimitadora, conforme mostrado aqui:
 
-    ![Uma imagem do texto na imagem descrita](media/read-text-computer-vision/text-bounding-boxes.png)
+    ![Uma imagem do texto na imagem contornada.](media/read-text-computer-vision/advert-bounding-boxes.jpg)
 
 1. Agora você pode experimentar com outra imagem. Selecione **Procurar um arquivo** e navegue até a pasta em que você salvou os arquivos do GitHub. Selecione **letter.jpg**.
 
@@ -71,10 +71,10 @@ Em seguida, conecte o recurso dos serviços de IA do Azure que você provisionou
 
 ## Limpeza
 
-Se você não pretende fazer mais exercícios, exclua todos os recursos de que você não precisa mais. Isso evita o acúmulo de custos desnecessários.
+Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita o acúmulo de custos desnecessários.
 
-1. Abra o **portal do Azure** em [https://portal.azure.com](https://portal.azure.com?azure-portal=true) e selecione o grupo de recursos que contem o recurso que você criou.
-1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1. Abra o **portal do Azure** em [https://portal.azure.com](https://portal.azure.com?azure-portal=true) e selecione o grupo de recursos que contém o recurso que você criou.
+1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
 
 ## Saiba mais
 
