@@ -25,10 +25,23 @@ Antes de usar os modelos do OpenAI do Azure, você precisa provisionar um recurs
 1. Faça logon no [Portal do Azure](https://portal.azure.com).
 2. Crie um recurso do **OpenAI do Azure** com as seguintes configurações:
     - **Assinatura**: *Uma assinatura do Azure que foi aprovada para acesso ao serviço OpenAI do Azure.*
-    - **Grupo de recursos**: *Escolha um grupo de recursos existente ou crie um com um nome de sua escolha.*
-    - **Região**: *escolha uma região disponível*.
-    - **Nome**: *Um nome exclusivo de sua preferência.*
+    - **Grupo de recursos**: *Escolha um grupo de recursos existente ou crie um novo com um nome de sua escolha.*
+    - **Região**: *faça uma escolha **aleatória** de uma das regiões a seguir*\*
+        - Leste da Austrália
+        - Leste do Canadá
+        - Leste dos EUA
+        - Leste dos EUA 2
+        - França Central
+        - Leste do Japão
+        - Centro-Norte dos EUA
+        - Suécia Central
+        - Norte da Suíça
+        - Sul do Reino Unido
+    - **Nome**: *um nome exclusivo de sua preferência*
     - **Tipo de preço**: Standard S0
+
+    > \* Os recursos do OpenAI do Azure são restritos por cotas regionais. As regiões listadas incluem a cota padrão para os tipos de modelos usados neste exercício. A escolha aleatória de uma região reduz o risco de uma só região atingir o limite de cota em cenários nos quais você compartilha uma assinatura com outros usuários. No caso de um limite de cota ser atingido mais adiante no exercício, há a possibilidade de você precisar criar outro recurso em uma região diferente.
+
 3. Aguarde o fim da implantação. Em seguida, vá para o recurso OpenAI do Azure implantado no portal do Azure.
 
 ## Implantar um modelo
@@ -39,7 +52,14 @@ Agora você está pronto para implantar um modelo a ser usado por meio do **Est�
 2. No Azure OpenAI Studio, crie uma implantação com as seguintes configurações:
     - **Modelo**: gpt-35-turbo
     - **Versão do Modelo**: atualização automática para padrão
-    - **Nome da implantação**: 35turbo
+    - **Nome de implantação**: *um nome exclusivo de sua preferência*
+    - **Opções avançadas**
+        - **Filtro de conteúdo**: Padrão
+        - **Tipo de implantação**: Padrão
+        - **Limite de taxa de tokens por minuto**: 5K\*
+        - **Habilitar cota dinâmica**: Habilitado
+
+    > \* Um limite de taxa de 5.000 tokens por minuto é mais do que adequado para concluir este exercício, deixando capacidade para outras pessoas que usam a mesma assinatura.
 
 > **Observação**: cada modelo do OpenAI do Azure é otimizado para um equilíbrio diferente de funcionalidades e desempenho. Usaremos o modelo **GPT 3.5 Turbo** neste exercício, que é altamente capaz para cenários de chat e geração de linguagem natural.
 
