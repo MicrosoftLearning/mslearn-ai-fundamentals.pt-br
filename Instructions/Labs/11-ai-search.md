@@ -36,7 +36,7 @@ A solução que você criará para a Fourth Coffee exige os seguintes recursos n
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
     - **Nome do serviço**: *um nome exclusivo*.
-    - **Localização**: *escolha qualquer região disponível*.
+    - **Localização**: *Escolha qualquer região disponível. Se estiver no leste dos EUA, use "Leste dos EUA 2"*.
     - **Tipo de preço**: Básico
 
 1. Selecione **Examinar + criar**, após a exibição da mensagem **Validação Bem-sucedida** e selecione **Criar**.

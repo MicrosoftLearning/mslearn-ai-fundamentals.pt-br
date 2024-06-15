@@ -20,7 +20,7 @@ Você pode usar muitos recursos da Linguagem de IA do Azure com um recurso **Lin
 1. Na página **Criar idioma**, configure-o com as seguintes definições:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: Leste dos EUA.
+    - **Região**: *Selecione a região geográfica mais próxima. Se estiver no leste dos EUA, use "Leste dos EUA 2"*.
     - **Nome**: *insira um nome exclusivo*.
     - **Tipo de preço**: *F0 Gratuito ou S se o F0 Gratuito não estiver disponível*
     - **Ao marcar esta caixa, reconheço que li e compreendi todos os termos abaixo**: *Selecionado*.

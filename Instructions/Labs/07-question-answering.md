@@ -31,7 +31,7 @@ Para usar a resposta às perguntas, você precisa de um recurso de **Linguagem**
         - **Assinatura**: *sua assinatura do Azure*.
         - **Grupo de recursos**: *selecione um grupo de recursos existente ou crie um novo*.
     - **Detalhes da Instância**
-        - **Região**: *Selecionar uma região*      
+        - **Região**: *Selecione uma região. Se estiver no leste dos EUA, use "Leste dos EUA 2"*      
         - **Nome**: *um nome exclusivo para o recurso de Linguagem*.
         - **Tipo de preço**: S (mil chamadas por minuto)
     - **Respostas às perguntas personalizadas**
