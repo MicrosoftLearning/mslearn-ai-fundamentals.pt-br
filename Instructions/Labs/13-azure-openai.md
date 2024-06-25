@@ -30,7 +30,7 @@ Antes de usar os modelos do OpenAI do Azure, você precisa provisionar um recurs
     - **Nome**: *um nome exclusivo de sua preferência*
     - **Tipo de preço**: Standard S0
 
-    > \* Diferentes regiões têm disponibilidade e cota diferentes para modelos. Neste exercício, você usará um modelo GPT-35-Turbo para a geração de texto e um modelo DALL-E para a geração de imagem, ambos com suporte no Leste dos EUA. 
+    > \* Diferentes regiões têm disponibilidade e cota diferentes para modelos. Neste exercício, você usará um modelo GPT-35-Turbo para a geração de texto e um modelo DALL-E para a geração de imagem, ambos com suporte no Leste dos EUA.
 
 3. Aguarde o fim da implantação. Em seguida, vá para o recurso OpenAI do Azure implantado no portal do Azure.
 

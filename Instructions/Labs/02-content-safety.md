@@ -29,28 +29,56 @@ Antes de usar o estúdio, você precisa associar um recurso de serviços de IA d
 
 ![Uma captura de tela do ícone de configurações no canto superior direito da tela, ao lado dos ícones de sino, ponto de interrogação e sorriso.](./media/content-safety/settings-toggle.png)
 
-1. Na página **Configurações**, você verá uma guia *Diretório* e a guia *Recurso*. Na guia *Recurso*, selecione **Criar um novo recurso**. Isso leva você à página para criar um recurso no Portal do Azure.
+2. Na página **Configurações**, você verá uma guia *Diretório* e a guia *Recurso*. Na guia *Recurso*, selecione **Criar um novo recurso**. Isso leva você à página para criar um recurso no Portal do Azure.
 
 > **Observação** A guia *Diretório* permite que os usuários selecionem diretórios diferentes para criar recursos. Você não precisa alterar suas configurações, a menos que deseje usar um diretório diferente. 
 
 ![Captura de tela de onde selecionar criar um recurso na página de configurações do Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. Na página *Criar segurança de conteúdo* no [portal do Azure](https://portal.azure.com?auzre-portal=true), você precisa configurar vários detalhes para criar seu recurso. Defina-o com as seguintes configurações:
+3. Na página *Criar segurança de conteúdo* no [portal do Azure](https://portal.azure.com?azure-portal=true), você precisa configurar vários detalhes para criar seu recurso. Defina-o com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: *escolha uma região disponível*.
+    - **Região**: *Escolha qualquer região disponível. Se estiver no leste dos EUA, use “Leste dos EUA 2”*.
     - **Nome**: *insira um nome exclusivo*.
     - **Tipo de preço**: F0 gratuito
 
-1. Selecione **Examinar + Criar** e examine a configuração. Em seguida, selecione **Criar**. A tela indicará quando a implantação for concluída. 
+4. Selecione **Examinar + Criar** e examine a configuração. Em seguida, selecione **Criar**. A tela indicará quando a implantação for concluída. 
 
 *Parabéns! Você acabou de criar ou provisionar um recurso dos serviços de IA do Azure. O que você provisionou em específico é um recurso de serviço de Segurança de conteúdo de serviço único.*
 
-1. Quando a implantação for concluída, abra uma nova guia e retorne ao [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
+5. Quando a implantação for concluída, abra uma nova guia e retorne ao [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
 
-1. Clique no ícone **Configurações** no canto superior direito da tela Desta vez, você deverá ver que o recurso recém-criado foi adicionado à lista.  
+6. Clique no ícone **Configurações** no canto superior direito da tela Desta vez, você deverá ver que o recurso recém-criado foi adicionado à lista.  
 
-1. Na página Configurações do Content Safety Studio, selecione o recurso do serviço de IA do Azure que você acabou de criar e clique em **Usar recurso** na parte inferior da tela. Você será levado de volta para a home page do estúdio. Agora você pode começar a usar o estúdio com o recurso recém-criado.
+>**Observação**: Se você estiver usando uma assinatura do Cloud Slice, poderá pular as etapas 7 a 12 e ir para a etapa 13. Caso contrário, continue com a etapa 7.
+
+7. Selecione **Ver todas as propriedades no portal do Azure** na parte inferior da tela *Configurações*. 
+
+![Captura de tela do link visualizar todas as propriedades no portal do Azure.](./media/content-safety/view-all-properties.png)
+
+8. No portal do Azure, selecione o recurso *Segurança de Conteúdo* que você acabou de criar. Em seguida, no painel esquerdo, selecione **Controle de Acesso (IAM)**. Em seguida, no painel aberto, selecione **Adicionar** ao lado do sinal de mais e selecione **Adicionar atribuição de função**. 
+
+![Captura de tela de onde selecionar adicionar atribuição de função no painel Controle de Acesso.](./media/content-safety/access-control-step-one.png)
+
+9. Procure **Usuário de Serviços Cognitivos** na lista de funções e selecione-o. Em seguida, selecione **Avançar**. 
+
+10. Use as seguintes configurações para atribuir-se à função: 
+    - **Atribuir acesso a**: selecione *usuário, grupo ou entidade de serviço*
+    - **Membros**: clique em *selecionar membros*
+        - No painel aberto *Selecionar membros*, encontre seu nome. Clique no ícone de adição ao lado do seu nome. Em seguida, clique em **Selecionar**.
+    - **Descrição**: *deixe em branco*
+
+11. Selecione **Revisar e atribuir** e selecione **Revisar e atribuir** novamente para adicionar a atribuição de função.    
+
+12. Retorne ao Content Safety Studio em [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Em seguida, selecione o ícone **Configurações** no canto superior direito da tela. 
+
+![Uma captura de tela do ícone de configurações no canto superior direito da tela, ao lado dos ícones de sino, ponto de interrogação e sorriso.](./media/content-safety/settings-toggle.png)
+ 
+13. Selecione o recurso de serviço IA do Azure que acabou de criar. Certifique-se de que em *Atribuições de funções atuais* você veja *Usuário de serviços cognitivos*, e *Proprietário*.
+
+![Uma captura de tela das atribuições de funções atuais.](./media/content-safety/access-control-check-step.png)
+
+14. Clique em **Usar recurso** na parte inferior da tela. Você será levado de volta para a home page do estúdio. Agora você pode começar a usar o estúdio com o recurso recém-criado.
 
 ## Experimentar a moderação de texto no Content Safety Studio
 

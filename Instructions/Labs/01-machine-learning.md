@@ -9,6 +9,8 @@ Neste exercício, você usará o recurso de machine learning automatizado no Azu
 
 Este exercício deve levar aproximadamente **30** minutos para ser concluído.
 
+>**Importante** No momento, é possível criar e implantar um modelo como um serviço Web no Estúdio do Azure Machine Learning, mas não é possível testá-lo no Estúdio. Portanto, é possível concluir todas, exceto a última seção de etapas antes da limpeza. Atualizaremos essa página conforme as alterações.
+
 ## Criar um workspace do Azure Machine Learning
 
 Para usar o Azure Machine Learning, você precisa provisionar um workspace do Azure Machine Learning em sua assinatura do Azure. Em seguida, você poderá usar o Estúdio do Azure Machine Learning para trabalhar com os recursos em seu workspace.
@@ -140,6 +142,8 @@ Quando o trabalho de machine learning automatizado for concluído, você poderá
 1. Aguarde até que o **Status de implantação** mude para *Bem-sucedida*. Isso pode levar de 5 a 10 minutos.
 
 ## Testar o serviço implantado
+
+>**Importante** Atualmente, o Estúdio do Azure Machine Learning não dá suporte ao tipo de criação de conjunto de dados necessário para usar o teste de implantação. Informaremos você quando houver uma resolução. 
 
 Agora você pode testar o serviço implantado.
 

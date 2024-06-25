@@ -36,7 +36,7 @@ A solução que você criará para a Fourth Coffee exige os seguintes recursos n
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
     - **Nome do serviço**: *um nome exclusivo*.
-    - **Localização**: *escolha qualquer região disponível*.
+    - **Localização**: *Escolha qualquer região disponível. Se estiver no leste dos EUA, use "Leste dos EUA 2"*.
     - **Tipo de preço**: Básico
 
 1. Selecione **Examinar + criar**, após a exibição da mensagem **Validação Bem-sucedida** e selecione **Criar**.
@@ -124,7 +124,7 @@ Depois de ter os documentos armazenados, você pode usar a Pesquisa de IA do Azu
 
 1. Selecione **Avançar: adicionar habilidades cognitivas (opcional)**.
 
-1. Na seção **Anexar Serviços Cognitivos**, selecione o recurso de serviços de IA do Azure.  
+1. Na seção **Anexar Serviços de IA**, selecione o recurso de serviços de IA do Azure.  
 
 1. Na seção **Adicionar enriquecimentos**:
     - Altere o **Nome do conjunto de habilidades** para **coffee-skillset**.
@@ -152,11 +152,12 @@ Depois de ter os documentos armazenados, você pode usar a Pesquisa de IA do Azu
     - Detalhes da imagem
     - Referências de imagem
 
-    > **Observação** Se um aviso solicitando uma **Cadeia de conexão da conta de armazenamento** aparecer.
+    > **Observação** Um aviso solicitando uma **Cadeia de conexão da conta de armazenamento** é exibido.
     >
     > ![Captura de tela que mostra o aviso da tela de conexão da conta de armazenamento com "Escolher uma conexão existente" selecionado.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. Selecione **Escolher uma conexão existente**. Selecione a conta de armazenamento criada anteriormente.
+
+1. Selecione **Escolher uma conexão existente**. Selecione a conta de armazenamento criada anteriormente.
     > 1. Clique em **+ Contêiner** para criar um contêiner chamado **knowledge-store** com o nível de privacidade definido como **Privado** e selecione **Criar**.
     > 1. Selecione o contêiner **knowledge-store** e clique em **Selecionar** na parte inferior da tela.
 
@@ -166,7 +167,7 @@ Depois de ter os documentos armazenados, você pode usar a Pesquisa de IA do Azu
 
 1. Verifique se a **Chave** está configurada como **metadata_storage_path**. Deixe **Nome do sugestor** em branco e **Modo de pesquisa** preenchido automaticamente.
 
-1. Examine as configurações padrão dos campos de índice. Selecione **filtrável** em todos os campos que já estão selecionados por padrão.
+1. Examine as configurações padrão dos campos de índice. Selecione **filtrável** em todos os campos que já estão selecionados por padrão. Os nomes de campo que precisam ser marcados para *filtragem* incluem: content, locations, keyphrases, sentiment, merged_content, text, layoutText, imageTags, imageCaption.
 
     ![Captura de tela que mostra o painel Personalizar índice com o nome do índice inserido e "Filtrável" selecionado para um campo de índice padrão.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
@@ -238,11 +239,11 @@ Por fim, vejamos o poder do repositório de conhecimento em ação. Quando você
 
 1. No portal do Azure, navegue de volta para a conta de armazenamento do Azure.
 
-2. No painel de menu à esquerda, selecione **Contêineres**. Selecione o contêiner **knowledge-store**.
+2. No painel de menu à esquerda, selecione **Contêineres**. Selecione o contêiner **knowledge-store**. 
 
     ![Captura de tela do contêiner do repositório de conhecimento.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
+3. Você verá uma lista de pastas. Há uma pasta para todos os metadados de cada documento de revisão. **Selecione qualquer uma das pastas**. Na pasta, clique no arquivo **objectprojection.json**.
 
     ![Captura de tela do objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 

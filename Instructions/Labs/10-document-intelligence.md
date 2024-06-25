@@ -23,7 +23,7 @@ Você pode usar a IA do Azure para Informação de Documentos criando um recurso
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
     - **Novo nome do recurso**: *Insira um nome exclusivo*.
-    - **Localização**: *Selecione uma região*.
+    - **Localização**: *Selecione uma região. Se no leste dos EUA, use "Leste dos EUA 2"*.
     - **Tipo de preço**: *FO Gratuito (se disponível, caso contrário, selecione SO Standard)*.
 1. Selecione **Continuar** e, em seguida, **Concluir**. Aguarde até o recurso ser implantado.
 
@@ -40,7 +40,7 @@ Agora você está pronto para analisar um recibo da empresa fictícia de varejo 
 1. Na lista suspensa Predefinido, certifique-se de que **Recibos** esteja selecionado.
 1. Selecione **Procurar arquivos** e navegue até a pasta em que a imagem foi salva. Selecione a imagem do recibo e, em seguida, **Abrir**. A imagem aparece no lado esquerdo da tela.
 
-    ![Recibo da Northwind.](media/document-intelligence/northwind-receipt.jpg)
+    ![Captura de tela de um recibo northwind.](media/document-intelligence/receipt.jpg)
 
 1. À direita, selecione **Executar análise**.
 1. Quando a análise for executada, os resultados serão retornados. Observe que o serviço reconheceu campos de dados específicos, como o nome do comerciante, o endereço, o número de telefone e a data e hora da transação, bem como os itens de linha, o subtotal, o imposto e o valor total. Ao lado de cada campo há uma probabilidade percentual de que o campo esteja correto.

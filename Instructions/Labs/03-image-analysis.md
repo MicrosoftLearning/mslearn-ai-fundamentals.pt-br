@@ -18,7 +18,7 @@ Você pode usar os recursos de análise de imagem da Visão de IA do Azure com u
 1. Clique no botão **&#65291;Criar um recurso** e pesquise por *serviços de IA do Azure*. Selecione **criar** um plano dos **serviços de IA do Azure**. Você será levado para uma página para criar um recurso dos serviços de IA do Azure. Defina-o com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: Leste dos EUA.
+    - **Região**: *Selecione a região geográfica mais próxima. Se estiver no leste dos EUA, use "Leste dos EUA 2"*.
     - **Nome**: *insira um nome exclusivo*.
     - **Tipo de preço**: *Standard S0.*
     - **Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo**: *Selecionado*.
