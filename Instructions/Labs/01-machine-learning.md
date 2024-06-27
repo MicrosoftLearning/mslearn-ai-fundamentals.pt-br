@@ -9,8 +9,6 @@ Neste exercício, você usará o recurso de machine learning automatizado no Azu
 
 Este exercício deve levar aproximadamente **30** minutos para ser concluído.
 
->**Importante** No momento, é possível criar e implantar um modelo como um serviço Web no Estúdio do Azure Machine Learning, mas não é possível testá-lo no Estúdio. Portanto, é possível concluir todas, exceto a última seção de etapas antes da limpeza. Atualizaremos essa página conforme as alterações.
-
 ## Criar um workspace do Azure Machine Learning
 
 Para usar o Azure Machine Learning, você precisa provisionar um workspace do Azure Machine Learning em sua assinatura do Azure. Em seguida, você poderá usar o Estúdio do Azure Machine Learning para trabalhar com os recursos em seu workspace.
@@ -47,8 +45,8 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
 
     **Configurações básicas**:
 
-    - **Nome do trabalho**: mslearn-bike-automl
-    - **Nome do novo experimento**: mslearn-bike-rental
+    - **Nome do trabalho**: `mslearn-bike-automl`
+    - **Nome do novo experimento**: `mslearn-bike-rental`
     - **Descrição**: machine learning automatizado para previsão de aluguel de bicicletas
     - **Marcas**: *nenhuma*
 
@@ -57,24 +55,16 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
     - **Selecionar tipo de tarefa**: regressão
     - **Selecionar conjunto de dados**: crie um novo conjunto de dados com as seguintes configurações:
         - **Tipo de dados**:
-            - **Nome**: bike-rentals
-            - **Descrição**: dados históricos de aluguel de bicicletas
-            - **Tipo**: tabular
+            - **Nome**: `bike-rentals`
+            - **Descrição**: `Historic bike rental data`
+            - **Tipo**: Tabela (mltable)
         - **Fonte de dados**:
-            - Selecione **De arquivos da Web**
-        - **URL da Web**:
-            - **URL da Web**: `https://aka.ms/bike-rentals`
-            - **Ignorar validação de dados**: *não selecionar*
-        - **Configurações**:
-            - **Formato de arquivo**: delimitado
-            - **Delimitador**: vírgula
-            - **Codificação**: UTF-8
-            - **Cabeçalhos de coluna**: somente o primeiro arquivo tem cabeçalhos
-            - **Ignorar linhas**: Nenhum
-            - **O conjunto de dados contém dados multilinhas**: *não selecione*
-        - **Esquema**:
-            - incluir todas as colunas que não sejam **Caminho**
-            - Examinar os tipos detectados automaticamente
+            - Selecionar **Dos arquivos locais**
+        - **Tipo de armazenamento de destino**:
+            - **Tipo de armazenamento de dados**: Armazenamento do Blobs do Azure
+            - **Nome**: workspaceblobstore
+        - **Seleção de MLtable**:
+            - **Carregar pasta**: *Baixe a pasta que contém os dois arquivos dos quais você precisa carregar* `https://aka.ms/bike-rentals`
 
         Selecione **Criar**. Após a criação do conjunto de dados, selecione o conjunto de dados de **aluguel de bicicletas** para continuar a enviar o trabalho do ML Automatizado.
 
@@ -84,17 +74,18 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
     - **Conjunto de dados**: bike-rentals
     - **Coluna de destino**: aluguéis (inteiro)
     - **Definições de configuração adicionais:**
-        - **Métrica primária**: erro quadrático médio da raiz normalizada
+        - **Métrica primária**: NormalizedRootMeanSquaredError
         - **Explicar o melhor modelo**: *não selecionado*
+        - **Habilitar empilhamento de conjunto**: *Não selecionado*
         - **Usar todos os modelos com suporte**: <u>Não</u>selecionado. *Você restringirá o trabalho para experimentar apenas alguns algoritmos específicos.*
         - **Modelos permitidos**: *selecione apenas **RandomForest** e **LightGBM**. O ideal seria tentar usar o máximo possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho.*
     - **Limites**: *expanda esta seção*
-        - **Avaliações máximas**: 3
-        - **Máximo de avaliações simultâneas**: 3
-        - **Máximo de nós**: 3
-        - **Limite de pontuação da métrica**: 0,085 (*de modo que se um modelo atingir uma pontuação métrica da raiz do erro quadrático médio de 0,085 ou menos, o trabalho termina.*)
-        - **Tempo limite**: 15
-        - **tempo limite de iteração**: 15
+        - **Avaliações máximas**: `3`
+        - **Máximo de avaliações simultâneas**: `3`
+        - **Máximo de nós**: `3`
+        - **Limite de pontuação da métrica**: `0.085` (* de modo que se um modelo atingir uma pontuação de métrica de raiz do erro quadrático médio normalizada de até 0,085, o trabalho será encerrado.*)
+        - **Tempo limite de eXPERIMENT**: `15`
+        - **Tempo limite de iteração**: `15`
         - **Habilitar encerramento antecipado**: *selecionado*
     - **Validação e teste**:
         - **Tipo de validação**: divisão de validação de treinamento
@@ -126,24 +117,25 @@ Quando o trabalho de machine learning automatizado for concluído, você poderá
   
 1. Selecione o texto em **Nome do algoritmo** do melhor modelo para exibir os respectivos detalhes.
 
-1. Selecione a guia **Métricas** e selecione os gráficos **residuais** e **predicted_true** se eles ainda não estiverem selecionados. 
+1. Selecione a guia **Métricas** e selecione os gráficos **residuais** e **predicted_true** se eles ainda não estiverem selecionados.
 
-    Examine os gráficos que mostram o desempenho do modelo. O gráfico de **resíduos** mostra os *resíduos* (as diferenças entre valores previstos e reais) como um histograma. O gráfico **predicted_true** compara os valores previstos com os valores verdadeiros. 
+    Examine os gráficos que mostram o desempenho do modelo. O gráfico de **resíduos** mostra os *resíduos* (as diferenças entre valores previstos e reais) como um histograma. O gráfico **predicted_true** compara os valores previstos com os valores verdadeiros.
 
 ## Implantar e testar o modelo
 
-1. Na guia **Modelo** para obter o melhor modelo treinado pelo trabalho de machine learning automatizado, selecione **Implantar** e use a opção **serviço Web** para implantar o modelo com as seguintes configurações:
-    - **Nome**: predict-rentals
-    - **Descrição**: prever aluguéis de bicicleta
-    - **Tipo de computação**: instância de Contêiner do Azure
-    - **Habilitar autenticação**: *Selecionado*
+1. Na guia **Modelo** para obter o melhor modelo treinado pelo trabalho de machine learning automatizado, selecione **Implantar** e use a opção **ponto de extremidade em tempo real** para implantar o modelo com as seguintes configurações:
+    - **Máquina virtual**: Standard_DS3_v2
+    - **Contagem de instâncias**: 3
+    - **Ponto de extremidade**: Novo
+    - **Nome do ponto de extremidade**: *Deixe o padrão ou verifique se ele é globalmente exclusivo*
+    - **Nome da implantação**: *Manter o padrão*
+    - **Coleta de dados de inferência**: *Disabled*
+    - **Empacotar modelo**: *Disabled*
 
 1. Aguarde até o início da implantação – isso pode levar alguns segundos. O **Status de implantação** para o ponto de extremidade **predict-rentals** será indicado na parte principal da página como *Em execução*.
 1. Aguarde até que o **Status de implantação** mude para *Bem-sucedida*. Isso pode levar de 5 a 10 minutos.
 
 ## Testar o serviço implantado
-
->**Importante** Atualmente, o Estúdio do Azure Machine Learning não dá suporte ao tipo de criação de conjunto de dados necessário para usar o teste de implantação. Informaremos você quando houver uma resolução. 
 
 Agora você pode testar o serviço implantado.
 
