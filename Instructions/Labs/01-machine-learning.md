@@ -64,7 +64,7 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
             - **Tipo de armazenamento de dados**: Armazenamento do Blobs do Azure
             - **Nome**: workspaceblobstore
         - **Seleção de MLtable**:
-            - **Carregar pasta**: *Baixe a pasta que contém os dois arquivos dos quais você precisa carregar* `https://aka.ms/bike-rentals`
+            - **Carregar pasta**: *Baixe e descompacte a pasta contendo os dois arquivos necessários para carregar* `https://aka.ms/bike-rentals`
 
         Selecione **Criar**. Após a criação do conjunto de dados, selecione o conjunto de dados de **aluguel de bicicletas** para continuar a enviar o trabalho do ML Automatizado.
 
@@ -145,29 +145,31 @@ Agora você pode testar o serviço implantado.
 
 1. No painel **Dados de entrada para testar o ponto de extremidade**, substitua o modelo JSON pelos seguintes dados de entrada:
 
-    ```JSON
+    ```json
     {
-      "Inputs": { 
-        "data": [
-          {
-            "day": 1,
-            "mnth": 1,   
-            "year": 2022,
-            "season": 2,
-            "holiday": 0,
-            "weekday": 1,
-            "workingday": 1,
-            "weathersit": 2, 
-            "temp": 0.3, 
-            "atemp": 0.3,
-            "hum": 0.3,
-            "windspeed": 0.3 
-          }
-        ]    
-      },   
-      "GlobalParameters": 1.0
+      "input_data": {
+        "columns": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+        ],
+        "index": [],
+        "data": []
+      }
     }
     ```
+
 
 1. Clique no botão**Testar**.
 
