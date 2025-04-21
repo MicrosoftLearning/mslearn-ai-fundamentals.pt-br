@@ -45,9 +45,9 @@ Neste exercício, você usará a Fala de IA do Azure no portal da Fábrica de IA
 
 ## Explorar a conversão de fala em texto no Playground de Fala da Fábrica de IA do Azure
 
-Vamos testar a *conversão de fala em texto* no Playground Fala da Fábrica de IA do Azure. 
+Vamos experimentar a *conversão de fala em texto* em tempo real no Playground Fala da Fábrica de IA do Azure. 
 
-1. Na página *Fala*, role para baixo e selecione **Transcrição em tempo real** em *Experimentar recursos de Fala*. O *Playground Fala* abrirá. 
+1. Na página *Fala*, role para baixo e selecione **Conversão de fala em texto em tempo real** em *Experimente funcionalidades de Fala*. O *Playground Fala* abrirá. 
 
 1. Selecione [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) para baixar **speech.zip**. Abra a pasta . 
 
@@ -59,7 +59,7 @@ Vamos testar a *conversão de fala em texto* no Playground Fala da Fábrica de I
 
 1. Examine a saída, que deve ter reconhecido o áudio e o transcrito com êxito em texto.
 
-Neste exercício, você experimentou os serviços de Fala de IA do Azure no Playground Fala da Fábrica de IA do Azure. Em seguida, você usou a Transcrição em tempo real para transcrever uma gravação de áudio. Você pôde ver a transcrição de texto sendo gerada à medida que o arquivo de áudio era reproduzido.
+Neste exercício, você experimentou os serviços de Fala de IA do Azure no Playground Fala da Fábrica de IA do Azure. Em seguida, você usou o serviço de Conversão de fala em texto em tempo real para transcrever uma gravação de áudio. Você pôde ver a transcrição de texto sendo gerada à medida que o arquivo de áudio era reproduzido.
 
 ## Limpeza
 
@@ -70,4 +70,4 @@ Se você não pretende fazer mais exercícios, exclua todos os recursos de que n
 
 ## Saiba mais
 
-Este exercício demonstrou uma das muitas funcionalidades do serviço de Fala. Saiba mais sobre o que você pode fazer com esse serviço consultando a [página de Fala](https://azure.microsoft.com/services/cognitive-services/speech-services).
+Este exercício demonstrou apenas algumas das funcionalidades do serviço de Fala. Saiba mais sobre o que você pode fazer com esse serviço consultando a [página de Fala](https://azure.microsoft.com/services/cognitive-services/speech-services).

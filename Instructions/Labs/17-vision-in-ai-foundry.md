@@ -17,7 +17,7 @@ Por exemplo, suponha que o varejista fictício *Northwind Traders* tenha decidid
 
 1. Na home page do portal da Fábrica de IA do Azure, selecione **Criar um projeto**. Na Fábrica de IA do Azure, os projetos são contêineres que ajudam a organizar o trabalho.  
 
-    ![Captura de tela da home page da Fábrica de IA do Azure com a criação de um projeto selecionada.](./media/azure-ai-foundry-home-page.png)
+    ![Captura de tela da home page da Fábrica de IA do Azure com "Criar um projeto" selecionado.](./media/azure-ai-foundry-home-page.png)
 
 1. No painel *Criar um projeto*, você verá um nome de projeto gerado, que pode ser mantido como está. Caso tenha criado um hub no passado, você verá uma lista de *novos* recursos do Azure a serem criados ou uma lista suspensa de hubs existentes. Se você vir a lista suspensa de hubs existentes, selecione *Criar novo hub*, crie um nome exclusivo para seu hub e selecione *Avançar*.  
  
@@ -79,13 +79,15 @@ O próximo recurso que você experimentará é a funcionalidade *Extrair Marcas*
 
 1. Retorne à página *Visão + Documento* da Fábrica de IA do Azure, selecione a guia **Imagem** e selecione o bloco **Extração de marca comum**.
 
-1. Abra a pasta que contém as imagens que você baixou e localize o arquivo chamado **store-image-2.jpg**, que tem esta aparência:
+2. Na opção **Escolher o modelo que você deseja experimentar**, deixe ** Produto predefinido versus o modelo de lacuna** selecionado. Na opção **Escolher seu idioma**, selecione **Inglês** ou um idioma de sua preferência.
+
+3. Abra a pasta que contém as imagens que você baixou e localize o arquivo chamado **store-image-2.jpg**, que tem esta aparência:
 
     ![Imagem de uma pessoa com uma cesta de compras em um supermercado](./media/analyze-images-vision/store-camera-2.jpg)
 
-1. Carregue o arquivo **store-camera-2.jpg** .
+4. Carregue o arquivo **store-camera-2.jpg** .
 
-1. Examine a lista de marcas extraídas da imagem e a pontuação de confiança para cada uma no painel de atributos detectado. Aqui, a pontuação de confiança é a probabilidade de que o texto do atributo detectado descreva o que realmente está na imagem. Observe na lista de marcas que ele inclui não apenas objetos, mas ações, como *compras*, *vendas*e *pendente*.
+5. Examine a lista de marcas extraídas da imagem e a pontuação de confiança para cada uma no painel de atributos detectado. Aqui, a pontuação de confiança é a probabilidade de que o texto do atributo detectado descreva o que realmente está na imagem. Observe na lista de marcas que ele inclui não apenas objetos, mas ações, como *compras*, *vendas*e *pendente*.
 
     ![Uma captura de tela do painel detectar atributos no Vision Studio com pontuações de texto e de confiança exibidas ao lado da imagem original.](./media/analyze-images-vision/detect-attributes.png)
 
@@ -94,6 +96,8 @@ O próximo recurso que você experimentará é a funcionalidade *Extrair Marcas*
 Nessa tarefa, você usará o recurso de **Detecção de objeto** da Análise de Imagem. A detecção de objetos detecta e extrai caixas delimitadoras com base em milhares de objetos e seres vivos reconhecíveis .
 
 1. Retorne à página *Visão + Documento* da Fábrica de IA do Azure, selecione a guia **Imagem** e selecione o bloco **Detecção de objeto comum**.
+
+1. Na opção **Escolher o modelo que você deseja experimentar**, deixe ** Produto predefinido versus o modelo de lacuna** selecionado.
 
 1. Abra a pasta que contém as imagens que você baixou e localize o arquivo chamado **store-camera-3.jpg**, que tem essa aparência:
 
