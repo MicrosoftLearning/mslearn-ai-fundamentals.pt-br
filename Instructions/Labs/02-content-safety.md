@@ -17,7 +17,7 @@ O Content Safety Studio permite explorar como o conteúdo de texto e imagem pode
 
 1. Abra o [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). Se você não estiver conectado, precisará entrar. Selecione **Entrar** no canto superior direito da tela. Use o email e a senha associados à sua assinatura do Azure para entrar. 
 
-1. O Content Safety Studio é configurado como muitos outros estúdios para serviços de IA do Azure. No menu na parte superior da tela, clique no ícone à esquerda de *IA do Azure*. Você verá uma lista suspensa de outros estúdios projetados para desenvolvimento com serviços de IA do Azure. Você pode clicar no ícone novamente para ocultar a lista.
+2. O Content Safety Studio é configurado como muitos outros estúdios para serviços de IA do Azure. No menu na parte superior da tela, clique no ícone à esquerda de *IA do Azure*. Você verá uma lista suspensa de outros estúdios projetados para desenvolvimento com serviços de IA do Azure. Você pode clicar no ícone novamente para ocultar a lista.
 
 ![Uma captura de tela do menu do Content Safety Studio com uma seleção de alternância aberta para alternar para outros estúdios.](./media/content-safety/studio-toggle-icon.png)  
 
@@ -50,44 +50,32 @@ Antes de usar o estúdio, você precisa associar um recurso de serviços de IA d
 
 6. Clique no ícone **Configurações** no canto superior direito da tela Desta vez, você deverá ver que o recurso recém-criado foi adicionado à lista.  
 
->**Observação**: Se você estiver usando uma assinatura do Cloud Slice, poderá pular as etapas 7 a 12 e ir para a etapa 13. Caso contrário, continue com a etapa 7.
+<details>  
+    <summary><b>Solução de problemas</b>: permissões para alunos individuais</summary>
+    <p><b>Se você estiver usando um ambiente de laboratório fornecido por um instrutor, ignore estas etapas.</b> Caso contrário, siga as seguintes etapas:</p>
+    <ul>
+        <li>Selecione <b>Ver todas as propriedades no portal do Azure</b> na parte inferior da tela *Configurações*.</li>
+        <li>No portal do Azure, selecione o recurso <em>Segurança de Conteúdo</em> que você acabou de criar. Em seguida, no painel esquerdo, selecione <b>Controle de Acesso (IAM)</b>. Em seguida, no painel aberto, selecione <b>Adicionar</b> ao lado do sinal de mais e selecione <b>Adicionar atribuição de função</b>.</li>
+        <li>Procure <b>Usuário de Serviços Cognitivos</b> na lista de funções e selecione-o. Em seguida, selecione <b>Avançar</b>. </li>
+        <li>Em <b>Atribuir acesso a</b>, selecione <b>Usuário, grupo ou entidade de serviço</b>, <b>+ Selecionar membros</b> e selecione o seu nome. Mantenha a descrição em branco.</li>
+        <li>Selecione <b>Avançar</b>. Na página <b>Tipo de atribuição</b>, selecione <b>Tipo de atribuição: Ativo</b>. Selecione <b>Duração da atribuição: Permanente</b>. Selecione <b>Avançar</b>.</li>
+        <li>Selecione <b>Revisar e atribuir</b> e <b>Revisar e atribuir</b> para adicionar a atribuição de função.</li>
+        <li>Retorne ao Content Safety Studio em https://contentsafety.cognitive.azure.com. Em seguida, selecione o ícone <b>Configurações</b> no canto superior direito da tela. Selecione o recurso Segurança de Conteúdo que você criou. Verifique se as <em>Atribuições de função atuais</em> incluem <b>Usuário de Serviços Cognitivos</b>. Talvez seja necessário aguardar um momento e atualizar a página para ver a atribuição de função aparecer.</li>
+    </ul>
+</details>
 
-7. Selecione **Ver todas as propriedades no portal do Azure** na parte inferior da tela *Configurações*. 
+7. Se você ainda não tiver feito isso, selecione o recurso de Segurança de Conteúdo que você criou. 
 
-![Captura de tela do link visualizar todas as propriedades no portal do Azure.](./media/content-safety/view-all-properties.png)
-
-8. No portal do Azure, selecione o recurso *Segurança de Conteúdo* que você acabou de criar. Em seguida, no painel esquerdo, selecione **Controle de Acesso (IAM)**. Em seguida, no painel aberto, selecione **Adicionar** ao lado do sinal de mais e selecione **Adicionar atribuição de função**. 
-
-![Captura de tela de onde selecionar adicionar atribuição de função no painel Controle de Acesso.](./media/content-safety/access-control-step-one.png)
-
-9. Procure **Usuário de Serviços Cognitivos** na lista de funções e selecione-o. Em seguida, selecione **Avançar**. 
-
-10. Use as seguintes configurações para atribuir-se à função: 
-    - **Atribuir acesso a**: selecione *usuário, grupo ou entidade de serviço*
-    - **Membros**: clique em *selecionar membros*
-        - No painel aberto *Selecionar membros*, encontre seu nome. Clique no ícone de adição ao lado do seu nome. Em seguida, clique em **Selecionar**.
-    - **Descrição**: *deixe em branco*
-
-11. Selecione **Revisar e atribuir** e selecione **Revisar e atribuir** novamente para adicionar a atribuição de função.    
-
-12. Retorne ao Content Safety Studio em [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Em seguida, selecione o ícone **Configurações** no canto superior direito da tela. 
-
-![Uma captura de tela do ícone de configurações no canto superior direito da tela, ao lado dos ícones de sino, ponto de interrogação e sorriso.](./media/content-safety/settings-toggle.png)
- 
-13. Selecione o recurso de serviço IA do Azure que acabou de criar. Certifique-se de que em *Atribuições de funções atuais* você veja *Usuário de serviços cognitivos*, e *Proprietário*.
-
-![Uma captura de tela das atribuições de funções atuais.](./media/content-safety/access-control-check-step.png)
-
-14. Clique em **Usar recurso** na parte inferior da tela. Você será levado de volta para a home page do estúdio. Agora você pode começar a usar o estúdio com o recurso recém-criado.
+8. Clique em **Usar recurso** na parte inferior da tela. Você será levado de volta para a home page do estúdio. Agora você pode começar a usar o estúdio com o recurso recém-criado.
 
 ## Experimentar a moderação de texto no Content Safety Studio
 
 1. Na página inicial do Content Safety Studio, em *Executar testes de moderação*, navegue até a caixa **Moderar conteúdo de texto** e clique em **Experimentar**.
-1. Em Executar um teste simples, selecione **Conteúdo seguro**. Observe que o texto é exibido na caixa abaixo. 
-1. Clique em **Executar teste**. Executar um teste chama o modelo de aprendizado profundo do serviço de Segurança de Conteúdo. O modelo de aprendizado profundo já foi treinado para reconhecer conteúdo não seguro.
-1. No painel *Resultados*, inspecione os resultados. Há quatro níveis de gravidade, de seguro a alto, e quatro tipos de conteúdo prejudicial. O serviço de IA de Segurança de Conteúdo considera esse exemplo aceitável ou não? O que é importante observar é que os resultados estão dentro de um intervalo de confiança. Um modelo bem treinado, como um dos modelos prontos para uso da IA do Azure, pode retornar resultados que têm uma alta probabilidade de corresponder ao que um humano rotularia o resultado. Sempre que você executa um teste, você chama o modelo novamente. 
-1. Agora, tente outra amostra. Selecione o texto em Conteúdo violento com erro de ortografia. Verifique se o conteúdo é exibido na caixa abaixo.
-1. Selecione **Executar teste** e inspecione os resultados no painel Resultados novamente. 
+2. Em Executar um teste simples, selecione **Conteúdo seguro**. Observe que o texto é exibido na caixa abaixo. 
+3. Clique em **Executar teste**. Executar um teste chama o modelo de aprendizado profundo do serviço de Segurança de Conteúdo. O modelo de aprendizado profundo já foi treinado para reconhecer conteúdo não seguro.
+4. No painel *Resultados*, inspecione os resultados. Há quatro níveis de gravidade, de seguro a alto, e quatro tipos de conteúdo prejudicial. O serviço de IA de Segurança de Conteúdo considera esse exemplo aceitável ou não? O que é importante observar é que os resultados estão dentro de um intervalo de confiança. Um modelo bem treinado, como um dos modelos prontos para uso da IA do Azure, pode retornar resultados que têm uma alta probabilidade de corresponder ao que um humano rotularia o resultado. Sempre que você executa um teste, você chama o modelo novamente. 
+5. Agora, tente outra amostra. Selecione o texto em Conteúdo violento com erro de ortografia. Verifique se o conteúdo é exibido na caixa abaixo.
+6. Selecione **Executar teste** e inspecione os resultados no painel Resultados novamente. 
 
 Execute testes em todos os exemplos fornecidos e inspecione os resultados.
 
@@ -96,7 +84,7 @@ Execute testes em todos os exemplos fornecidos e inspecione os resultados.
 Esses recursos testados podem ser programados em todos os tipos de aplicativos. As chaves e o ponto de extremidade usados para o desenvolvimento de aplicativos podem ser encontrados no Content Safety Studio e no portal do Azure. 
 
 1. No Content Safety Studio, navegue de volta para a página **Configurações**, com a guia *Recursos* selecionada. Procure o recurso que você usou. Role para ver o ponto de extremidade e a chave do recurso. 
-1. No Portal do Azure, você verá que eles são o *mesmo* ponto de extremidade e chaves *diferentes* para o recurso. Para verificar, vá para o [portal do Azure](https://portal.azure.com?auzre-portal=true). Pesquise *Segurança de conteúdo* na barra de pesquisa superior. Localize seu recurso e clique nele. No menu à esquerda, procure em *Gerenciamento de recursos* por *Chaves e pontos de extremidade*. Selecione **Chaves e pontos de extremidade** para exibir o ponto de extremidade e as chaves do recurso. 
+2. No Portal do Azure, você verá que eles são o *mesmo* ponto de extremidade e chaves *diferentes* para o recurso. Para verificar, vá para o [portal do Azure](https://portal.azure.com?auzre-portal=true). Pesquise *Segurança de conteúdo* na barra de pesquisa superior. Localize seu recurso e clique nele. No menu à esquerda, procure em *Gerenciamento de recursos* por *Chaves e pontos de extremidade*. Selecione **Chaves e pontos de extremidade** para exibir o ponto de extremidade e as chaves do recurso. 
 
 Depois de terminar, você pode excluir o recurso de Segurança de Conteúdo do Portal do Azure. Excluir o recurso é uma maneira de reduzir os custos acumulados quando o recurso existe na assinatura. Para fazer isso, navegue até a página **Visão geral** do recurso Segurança de conteúdo. Selecione **Excluir** na parte superior da tela.
 

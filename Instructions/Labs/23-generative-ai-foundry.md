@@ -21,7 +21,7 @@ A IA generativa descreve uma categoria de recursos dentro da IA que criam conte�
  
     ![Captura de tela do painel criar um projeto com nomes gerados automaticamente para hub e projeto.](./media/azure-ai-foundry-create-project.png)
 
-    > **Importante**: você precisará de um recurso de serviços de IA do Azure provisionado em um local específico para concluir o restante do laboratório.
+> **Importante**: você precisará de um recurso de serviços de IA do Azure provisionado em um local específico para concluir o restante do laboratório.
 
 1. No mesmo painel *Criar um projeto*, selecione **Personalizar** e selecione um dos seguintes **locais**: Leste dos EUA, França Central, Coreia Central, Oeste da Europa ou Oeste dos EUA para concluir o restante do laboratório. Em seguida, selecione **Criar**. 
 
@@ -39,7 +39,7 @@ A IA generativa descreve uma categoria de recursos dentro da IA que criam conte�
 
 ## Explorar a IA generativa no playground de chat da Fábrica de IA do Azure
 
-1. Na página Playgrounds da Fábrica de IA do Azure, selecione **Experimentar o Playground Chat**. O Playground Chat é uma interface do usuário que permite que você teste a criação de um aplicativo de chat com diferentes modelos de IA generativa.  
+1. Na página Playgrounds da Fábrica de IA do Azure, selecione **Experimentar o Playground Chat**. O playground chat é uma interface de usuário que permite que você crie um aplicativo de chat com diferentes modelos de IA generativa.  
 
 1. Para usar o Playground Chat, você precisa associá-lo a um modelo implantado. No Playground chat, selecione **Criar uma implantação**. Pesquise e selecione **gpt-4**. 
 
