@@ -7,7 +7,7 @@ lab:
 
 Neste exercício, você usará o recurso de machine learning automatizado no Azure Machine Learning para treinar e avaliar um modelo de machine learning. Em seguida, você implantará e testará o modelo treinado.
 
-Este exercício deve levar aproximadamente **30** minutos para ser concluído.
+Este exercício deve levar aproximadamente **35** minutos para ser concluído.
 
 ## Criar um workspace do Azure Machine Learning
 
@@ -21,7 +21,7 @@ Para usar o Azure Machine Learning, você precisa provisionar um workspace do Az
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *crie ou selecione um grupo de recursos*.
     - **Nome**: *insira um nome exclusivo para o seu workspace*.
-    - **Região**: *selecione a região geográfica mais próxima*.
+    - **Região**: Leste dos EUA.
     - **Conta de armazenamento**: *anote a nova conta de armazenamento padrão que será criada para o workspace*.
     - **Cofre de chaves**: *anote o novo cofre de chaves padrão que será criado para o workspace*.
     - **Application Insights**: *anote o novo recurso Application Insights padrão que será criado para o workspace*.
@@ -29,7 +29,9 @@ Para usar o Azure Machine Learning, você precisa provisionar um workspace do Az
 
 1. Selecione **Examinar + criar**e **Criar**. Aguarde até que o workspace seja criado (isso pode demorar alguns minutos) e acesse o recurso implantado.
 
-1. Selecione **Iniciar o estúdio** (ou abra uma nova guia do navegador, acesse [https://ml.azure.com](https://ml.azure.com?azure-portal=true) e entre no Estúdio do Azure Machine Learning usando a conta Microsoft). Feche todas as mensagens exibidas.
+#### Iniciar estúdio 
+
+1. No recurso do workspace do Azure Machine Learning, selecione **Iniciar estúdio** (ou abra uma nova guia do navegador e navegue até [https://ml.azure.com](https://ml.azure.com?azure-portal=true) e entre no estúdio do Azure Machine Learning usando sua conta da Microsoft). Feche todas as mensagens exibidas.
 
 1. No Estúdio do Azure Machine Learning, você verá o workspace recém-criado. Caso contrário, selecione **Todos os workspaces** no menu à esquerda e selecione o workspace que você acabou de criar.
 
@@ -45,7 +47,7 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
 
     **Configurações básicas**:
 
-    - **Nome do trabalho**: `mslearn-bike-automl`
+    - **Nome do trabalho**: o campo de nome do trabalho já deve estar pré-preenchido com um nome exclusivo. Mantenha como está.
     - **Nome do novo experimento**: `mslearn-bike-rental`
     - **Descrição**: machine learning automatizado para previsão de aluguel de bicicletas
     - **Marcas**: *nenhuma*
@@ -84,7 +86,7 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
         - **Máximo de avaliações simultâneas**: `3`
         - **Máximo de nós**: `3`
         - **Limite de pontuação da métrica**: `0.085` (* de modo que se um modelo atingir uma pontuação de métrica de raiz do erro quadrático médio normalizada de até 0,085, o trabalho será encerrado.*)
-        - **Tempo limite de eXPERIMENT**: `15`
+        - **Tempo limite de experimento**: `15`
         - **Tempo limite de iteração**: `15`
         - **Habilitar encerramento antecipado**: *selecionado*
     - **Validação e teste**:
@@ -112,8 +114,6 @@ Quando o trabalho de machine learning automatizado for concluído, você poderá
 
 1. Na guia **Visão geral** do trabalho de machine learning automatizado, observe o resumo do melhor modelo.
     ![Captura de tela do resumo do melhor modelo do trabalho de machine learning automatizado com uma caixa em torno do nome do algoritmo.](./media/use-automated-machine-learning/complete-run.png)
-
-    > **Note**: você pode ver uma mensagem sob o status "Aviso: pontuação de saída especificada pelo usuário atingida...". Essa é uma mensagem esperada. Continue na próxima etapa.
   
 1. Selecione o texto em **Nome do algoritmo** do melhor modelo para exibir os respectivos detalhes.
 
@@ -132,6 +132,8 @@ Quando o trabalho de machine learning automatizado for concluído, você poderá
     - **Coleta de dados de inferência**: *Disabled*
     - **Empacotar modelo**: *Disabled*
 
+    > **Observação**: se você receber uma mensagem informando que não há cota suficiente para selecionar a máquina virtual *Standard_DS3_v2*, selecione uma diferente.
+
 1. Aguarde até o início da implantação – isso pode levar alguns segundos. O **Status de implantação** para o ponto de extremidade **predict-rentals** será indicado na parte principal da página como *Em execução*.
 1. Aguarde até que o **Status de implantação** mude para *Bem-sucedida*. Isso pode levar de 5 a 10 minutos.
 
@@ -146,41 +148,37 @@ Agora você pode testar o serviço implantado.
 1. No painel **Dados de entrada para testar o ponto de extremidade**, substitua o modelo JSON pelos seguintes dados de entrada:
 
     ```json
-    {
-      "input_data": {
-        "columns": [
-            {
-                "day": 1,
-                "mnth": 1,   
-                "year": 2022,
-                "season": 2,
-                "holiday": 0,
-                "weekday": 1,
-                "workingday": 1,
-                "weathersit": 2, 
-                "temp": 0.3, 
-                "atemp": 0.3,
-                "hum": 0.3,
-                "windspeed": 0.3 
-            }
-        ],
-        "index": [],
-        "data": []
-      }
+      {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
     }
-    ```
 
+    ```
 
 1. Clique no botão**Testar**.
 
 1. Revise os resultados do teste, que incluem um número previsto de aluguéis com base nos recursos de entrada – semelhante ao seguinte:
 
     ```JSON
-    {
-      "Results": [
-        444.27799000000000
-      ]
-    }
+    [
+      352.3564674945718
+    ]
     ```
 
     O painel de teste pegou os dados de entrada e usou o modelo que você treinou para retornar o número previsto de locações.
