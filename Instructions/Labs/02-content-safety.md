@@ -5,86 +5,71 @@ lab:
 
 # Explore os serviços de IA do Azure
 
-Os serviços de IA do Azure ajudam os usuários a criar aplicativos de IA com APIs e modelos prontos para uso, predefinidos e personalizáveis. Neste exercício, você examinará um dos serviços, a Segurança de Conteúdo de IA do Azure, no Content Safety Studio.
+Os serviços de IA do Azure ajudam os usuários a criar aplicativos de IA com APIs e modelos prontos para uso, predefinidos e personalizáveis. Neste exercício, você criará um recurso no portal do Azure e experimentará os serviços de IA do Azure. A meta deste exercício é obter uma noção geral de como os serviços de IA do Azure são provisionados e usados.
 
-O Content Safety Studio permite explorar como o conteúdo de texto e imagem pode ser moderado. Execute testes em textos ou imagens de exemplo e obtenha uma pontuação de severidade que varia de seguro a alto para cada categoria. Neste exercício de laboratório, você criará um recurso de serviço único no Content Safety Studio e testará suas funcionalidades. 
+## Criar um recurso de *serviços de IA do Azure* no portal do Azure
 
-> **Observação** A meta deste exercício é obter uma noção geral de como os serviços de IA do Azure são provisionados e usados. A Segurança de Conteúdo é usada como exemplo, mas não se espera que você obtenha um conhecimento abrangente da segurança de conteúdo neste exercício!
+1. Em uma guia do navegador, abra o portal do Azure em [https://portal.azure.com](https://portal.azure.com?azure-portal=true) e entre usando a conta Microsoft associada à sua assinatura do Azure.
 
-## Navegar pelo Content Safety Studio 
-
-![Captura de tela da página de aterrissagem do estúdio de segurança de conteúdo.](./media/content-safety/content-safety-getting-started.png)
-
-1. Abra o [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). Se você não estiver conectado, precisará entrar. Selecione **Entrar** no canto superior direito da tela. Use o email e a senha associados à sua assinatura do Azure para entrar. 
-
-2. O Content Safety Studio é configurado como muitos outros estúdios para serviços de IA do Azure. No menu na parte superior da tela, clique no ícone à esquerda de *IA do Azure*. Você verá uma lista suspensa de outros estúdios projetados para desenvolvimento com serviços de IA do Azure. Você pode clicar no ícone novamente para ocultar a lista.
-
-![Uma captura de tela do menu do Content Safety Studio com uma seleção de alternância aberta para alternar para outros estúdios.](./media/content-safety/studio-toggle-icon.png)  
-
-## Associar um recurso ao estúdio 
-
-Antes de usar o estúdio, você precisa associar um recurso de serviços de IA do Azure ao estúdio. Dependendo do estúdio, você pode achar que precisa de um recurso de serviço único específico ou pode usar um recurso geral de vários serviços. No caso do Content Safety Studio, você pode usar o serviço criando um recurso de *Segurança de conteúdo* de serviço único ou um recurso geral de vários serviços dos *serviços de IA do Azure*. Nas etapas abaixo, criaremos um recurso de Segurança de Conteúdo de serviço único. 
-
-1. No canto superior direito da tela, clique no ícone **Configurações**. 
-
-![Uma captura de tela do ícone de configurações no canto superior direito da tela, ao lado dos ícones de sino, ponto de interrogação e sorriso.](./media/content-safety/settings-toggle.png)
-
-2. Na página **Configurações**, você verá uma guia *Diretório* e a guia *Recurso*. Na guia *Recurso*, selecione **Criar um novo recurso**. Isso leva você à página para criar um recurso no Portal do Azure.
-
-> **Observação** A guia *Diretório* permite que os usuários selecionem diretórios diferentes para criar recursos. Você não precisa alterar suas configurações, a menos que deseje usar um diretório diferente. 
-
-![Captura de tela de onde selecionar criar um recurso na página de configurações do Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
-
-3. Na página *Criar segurança de conteúdo* no [portal do Azure](https://portal.azure.com?azure-portal=true), você precisa configurar vários detalhes para criar seu recurso. Defina-o com as seguintes configurações:
+1. Clique no botão **&#65291;Criar um recurso** e pesquise por *serviços de IA do Azure*. Selecione **criar** um plano dos **serviços de IA do Azure**. Você será levado para uma página para criar um recurso dos serviços de IA do Azure. Defina-o com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*.
     - **Grupo de recursos**: *selecione ou crie um grupo de recursos com um nome exclusivo*.
-    - **Região**: *Escolha qualquer região disponível. Se estiver no leste dos EUA, use “Leste dos EUA 2”*.
+    - **Região**: *Selecione a região geográfica mais próxima. Se estiver no leste dos EUA, use “Leste dos EUA 2”*.
     - **Nome**: *insira um nome exclusivo*.
-    - **Tipo de preço**: F0 gratuito
+    - **Tipo de preço**: *Standard S0.*
+    - **Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo**: *Selecionado*.
 
-4. Selecione **Examinar + Criar** e examine a configuração. Em seguida, selecione **Criar**. A tela indicará quando a implantação for concluída. 
+1. Selecione **Revisar + criar** e, em seguida, **Criar** e aguarde a conclusão da implantação.
 
-*Parabéns! Você acabou de criar ou provisionar um recurso dos serviços de IA do Azure. O que você provisionou em específico é um recurso de serviço de Segurança de conteúdo de serviço único.*
+    *Parabéns! Você acabou de criar ou provisionar um recurso dos serviços de IA do Azure. O que você provisionou em específico é um recurso de vários serviços.*
 
-5. Quando a implantação for concluída, abra uma nova guia e retorne ao [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
-
-6. Clique no ícone **Configurações** no canto superior direito da tela Desta vez, você deverá ver que o recurso recém-criado foi adicionado à lista.  
-
-<details>  
-    <summary><b>Solução de problemas</b>: permissões para alunos individuais</summary>
-    <p><b>Se você estiver usando um ambiente de laboratório fornecido por um instrutor, ignore estas etapas.</b> Caso contrário, siga as seguintes etapas:</p>
-    <ul>
-        <li>Selecione <b>Ver todas as propriedades no portal do Azure</b> na parte inferior da tela *Configurações*.</li>
-        <li>No portal do Azure, selecione o recurso <em>Segurança de Conteúdo</em> que você acabou de criar. Em seguida, no painel esquerdo, selecione <b>Controle de Acesso (IAM)</b>. Em seguida, no painel aberto, selecione <b>Adicionar</b> ao lado do sinal de mais e selecione <b>Adicionar atribuição de função</b>.</li>
-        <li>Procure <b>Usuário de Serviços Cognitivos</b> na lista de funções e selecione-o. Em seguida, selecione <b>Avançar</b>. </li>
-        <li>Em <b>Atribuir acesso a</b>, selecione <b>Usuário, grupo ou entidade de serviço</b>, <b>+ Selecionar membros</b> e selecione o seu nome. Mantenha a descrição em branco.</li>
-        <li>Selecione <b>Avançar</b>. Na página <b>Tipo de atribuição</b>, selecione <b>Tipo de atribuição: Ativo</b>. Selecione <b>Duração da atribuição: Permanente</b>. Selecione <b>Avançar</b>.</li>
-        <li>Selecione <b>Revisar e atribuir</b> e <b>Revisar e atribuir</b> para adicionar a atribuição de função.</li>
-        <li>Retorne ao Content Safety Studio em https://contentsafety.cognitive.azure.com. Em seguida, selecione o ícone <b>Configurações</b> no canto superior direito da tela. Selecione o recurso Segurança de Conteúdo que você criou. Verifique se as <em>Atribuições de função atuais</em> incluem <b>Usuário de Serviços Cognitivos</b>. Talvez seja necessário aguardar um momento e atualizar a página para ver a atribuição de função aparecer.</li>
-    </ul>
-</details>
-
-7. Se você ainda não tiver feito isso, selecione o recurso de Segurança de Conteúdo que você criou. 
-
-8. Clique em **Usar recurso** na parte inferior da tela. Você será levado de volta para a home page do estúdio. Agora você pode começar a usar o estúdio com o recurso recém-criado.
-
-## Experimentar a moderação de texto no Content Safety Studio
-
-1. Na página inicial do Content Safety Studio, em *Executar testes de moderação*, navegue até a caixa **Moderar conteúdo de texto** e clique em **Experimentar**.
-2. Em Executar um teste simples, selecione **Conteúdo seguro**. Observe que o texto é exibido na caixa abaixo. 
-3. Clique em **Executar teste**. Executar um teste chama o modelo de aprendizado profundo do serviço de Segurança de Conteúdo. O modelo de aprendizado profundo já foi treinado para reconhecer conteúdo não seguro.
-4. No painel *Resultados*, inspecione os resultados. Há quatro níveis de gravidade, de seguro a alto, e quatro tipos de conteúdo prejudicial. O serviço de IA de Segurança de Conteúdo considera esse exemplo aceitável ou não? O que é importante observar é que os resultados estão dentro de um intervalo de confiança. Um modelo bem treinado, como um dos modelos prontos para uso da IA do Azure, pode retornar resultados que têm uma alta probabilidade de corresponder ao que um humano rotularia o resultado. Sempre que você executa um teste, você chama o modelo novamente. 
-5. Agora, tente outra amostra. Selecione o texto em Conteúdo violento com erro de ortografia. Verifique se o conteúdo é exibido na caixa abaixo.
-6. Selecione **Executar teste** e inspecione os resultados no painel Resultados novamente. 
-
-Execute testes em todos os exemplos fornecidos e inspecione os resultados.
+1. Após a conclusão da implantação, selecione *Ir para o recurso*. 
 
 ## Confira as chaves e o ponto de extremidade
 
-Esses recursos testados podem ser programados em todos os tipos de aplicativos. As chaves e o ponto de extremidade usados para o desenvolvimento de aplicativos podem ser encontrados no Content Safety Studio e no portal do Azure. 
+Para incorporar os serviços de IA do Azure em aplicativos, os desenvolvedores precisam de uma chave de serviço e um ponto de extremidade. As chaves e o ponto de extremidade usados para o desenvolvimento de aplicativos podem ser encontrados no portal do Azure. 
 
-1. No Content Safety Studio, navegue de volta para a página **Configurações**, com a guia *Recursos* selecionada. Procure o recurso que você usou. Role para ver o ponto de extremidade e a chave do recurso. 
-2. No Portal do Azure, você verá que eles são o *mesmo* ponto de extremidade e chaves *diferentes* para o recurso. Para verificar, vá para o [portal do Azure](https://portal.azure.com?auzre-portal=true). Pesquise *Segurança de conteúdo* na barra de pesquisa superior. Localize seu recurso e clique nele. No menu à esquerda, procure em *Gerenciamento de recursos* por *Chaves e pontos de extremidade*. Selecione **Chaves e pontos de extremidade** para exibir o ponto de extremidade e as chaves do recurso. 
+1. No portal do Azure, selecione seu recurso. No menu à esquerda, procure em *Gerenciamento de recursos* por *Chaves e pontos de extremidade*. Selecione **Chaves e pontos de extremidade** para exibir o ponto de extremidade e as chaves do recurso. 
 
-Depois de terminar, você pode excluir o recurso de Segurança de Conteúdo do Portal do Azure. Excluir o recurso é uma maneira de reduzir os custos acumulados quando o recurso existe na assinatura. Para fazer isso, navegue até a página **Visão geral** do recurso Segurança de conteúdo. Selecione **Excluir** na parte superior da tela.
+## Confira os serviços de IA do Azure em ação
+
+1. Em uma guia do navegador, navegue até a [Fábrica de IA do Azure](https://ai.azure.com?azure-portal=true).
+
+1. Entre com sua conta. 
+
+1. Em *Trabalhar fora de um projeto*, selecione o bloco **Exibir Serviços de IA **.
+ 
+    ![Captura de tela do menu à esquerda da tela do projeto com os Serviços de IA selecionados.](./media/view-ai-foundry-outside-project.png)  
+
+1. Na página *Serviços de IA*, clique no bloco *Visão + Documento* para experimentar os recursos Visão de IA do Azure e Documento.
+
+    ![Captura de tela do bloco Visão e Documento selecionado na página Serviços de IA.](./media/vision-document-tile.png)
+
+1. Em *Exibir todos os recursos de Visão*, selecione a guia **Detecção facial**. 
+
+1. Selecione o bloco de demonstração *Detectar rostos em uma imagem*. 
+
+1. Experimente a detecção facial, que é um dos muitos serviços de IA do Azure. Clique em uma imagem e confira os atributos detectados. 
+
+    ![Captura de tela da demonstração de detecção de rostos no Portal da Fábrica de IA do Azure.](./media/detect-faces-demo.png)
+
+1. Role para baixo até a seção **Executar o código**. Selecione **Visualizar código**. Role até a seção que começa com *import os*. No código de exemplo fornecido, você verá espaços reservados onde você pode colocar uma chave e um ponto de extremidade.
+
+    ![Captura de tela da tela de exibição de código com uma exibição dos espaços reservados de código para chave e ponto de extremidade.](./media/view-code-example.png) 
+
+1. Se você fosse criar um aplicativo que usasse os serviços de IA do Azure, poderia começar com o código fornecido. Ao substituir os espaços reservados pela chave e pelo ponto de extremidade do seu próprio serviço, seu aplicativo poderá enviar solicitações e receber respostas que utilizam os serviços de IA do Azure. No caso da detecção facial, a *solicitação* é para que a detecção facial analise a imagem. A *resposta* são os atributos detectados. 
+
+    >**Observação** você não precisa saber programação para concluir nenhum dos exercícios deste curso. Continuaremos a dar uma olhada nos serviços de IA do Azure em ação por meio do Portal da Fábrica de IA do Azure.  
+ 
+## Limpar 
+
+Depois de terminar, você pode excluir o recurso de Serviços de IA do Azure no Portal do Azure. Excluir o recurso é uma maneira de reduzir os custos acumulados quando o recurso existe na assinatura. Para fazer isso, navegue até a página **Visão geral** do recurso Serviços de IA do Azure. Selecione **Excluir** na parte superior da tela.
+
+
+
+
+
+
+
+
 

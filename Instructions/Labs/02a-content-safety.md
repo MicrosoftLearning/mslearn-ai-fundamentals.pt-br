@@ -1,8 +1,3 @@
----
-lab:
-  title: Explorar a Segurança de Conteúdo na Fábrica de IA do Azure
----
-
 # Explorar a Segurança de Conteúdo na Fábrica de IA do Azure
 
 Os serviços de IA do Azure ajudam os usuários a criar aplicativos de IA com APIs e modelos prontos para uso, predefinidos e personalizáveis. Neste exercício, você analisará um dos serviços, a Segurança de Conteúdo de IA do Azure, que permite moderar o conteúdo de texto e imagem. No portal da Fábrica de IA do Azure, a plataforma da Microsoft para criar aplicativos inteligentes, você usará a Segurança de Conteúdo de IA do Azure para categorizar o texto e atribuir a ele a pontuação de gravidade. 
