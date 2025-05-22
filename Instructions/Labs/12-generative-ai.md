@@ -9,33 +9,36 @@ A IA generativa descreve uma categoria de recursos dentro da IA que criam conte�
 
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-1. Em uma guia do navegador, navegue até a [Fábrica de IA do Azure](https://ai.azure.com?azure-portal=true).
+Vamos começar criando um projeto da Fábrica de IA do Azure.
 
-1. Entre com sua conta. 
-
-1. Na home page do portal da Fábrica de IA do Azure, selecione **Criar um projeto**. Na Fábrica de IA do Azure, os projetos são contêineres que ajudam a organizar o trabalho.  
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
 
     ![Captura de tela da home page da Fábrica de IA do Azure com "Criar um projeto" selecionado.](./media/azure-ai-foundry-home-page.png)
 
-1. No painel *Criar um projeto*, você verá um nome de projeto gerado, que pode ser mantido como está. Caso tenha criado um hub no passado, você verá uma lista de *novos* recursos do Azure a serem criados ou uma lista suspensa de hubs existentes. Se você vir a lista suspensa de hubs existentes, selecione *Criar novo hub*, crie um nome exclusivo para seu hub e selecione *Avançar*.  
- 
-    ![Captura de tela do painel criar um projeto com nomes gerados automaticamente para hub e projeto.](./media/azure-ai-foundry-create-project.png)
+1. Na home page, clique em **+Criar um agente**.
 
-    > **Importante**: você precisará de um recurso de serviços de IA do Azure provisionado em um local específico para concluir o restante do laboratório.
+1. No assistente **Criar um agente**, insira um nome válido para o projeto. 
 
-1. No mesmo painel *Criar um projeto*, selecione **Personalizar** e selecione um dos seguintes **locais**: Leste dos EUA, França Central, Coreia Central, Oeste da Europa ou Oeste dos EUA para concluir o restante do laboratório. Em seguida, selecione **Criar**. 
+1. Clique em **Opções avançadas** e especifique as seguintes configurações:
+    - **Recurso da Fábrica de IA do Azure**: *manter o nome padrão*
+    - **Assinatura**: *sua assinatura do Azure*
+    - **Grupo de recursos**: *criar ou selecionar um grupo de recursos*
+    - **Região**: selecione um dos seguintes locais:
+        * Leste dos EUA
+        * França Central
+        * Coreia Central
+        * Europa Ocidental
+        * Oeste dos EUA
 
-1. Anote os recursos criados: 
-- Serviços de IA do Azure
-- Hub de IA do Azure
-- Projeto de IA do Azure
-- Conta de armazenamento
-- Key vault
-- Grupo de recursos  
- 
-1. Depois que os recursos forem criados, a página *Visão geral* do projeto abrirá. No menu à esquerda da tela, selecione **Playgrounds**.
- 
-    ![Captura de tela do menu à esquerda da tela do projeto com os Serviços de IA selecionados.](./media/azure-ai-foundry-playgrounds.png)  
+1. Clique em **Criar** e revise a configuração. Aguarde a conclusão do processo de configuração.
+
+    >**Observação**: se você receber um erro de permissões, clique no botão **Corrigir** para adicionar as permissões apropriadas para continuar.
+
+1. Quando o projeto for criado, o playground Agentes abrirá por padrão no portal da Portal da Fábrica de IA do Azur, que será semelhante à imagem a seguir:
+
+    ![Captura de tela dos detalhes de um projeto IA do Azure no Portal da Fábrica de IA do Azure.](./media/ai-foundry-project-2.png)
+
+1. No menu à esquerda da tela, selecione **Playgrounds**.
 
 ## Explorar a IA generativa no playground de chat da Fábrica de IA do Azure
 
