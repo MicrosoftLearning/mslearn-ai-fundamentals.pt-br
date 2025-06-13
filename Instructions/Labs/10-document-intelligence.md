@@ -13,20 +13,15 @@ Neste exercício, você usará os modelos predefinidos da IA do Azure para Infor
 
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-Vamos começar criando um projeto da Fábrica de IA do Azure.
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar. 
 
-1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
+1. No navegador, navegue até `https://ai.azure.com/managementCenter/allResources` e clique em **Criar**. Em seguida, escolha a opção para criar um novo *Recurso do hub de IA*.
 
-    ![Captura de tela da home page da Fábrica de IA do Azure com "Criar um agente" selecionado.](./media/azure-ai-foundry-home-page.png)
+1. No assistente *Criar projeto*, insira um nome válido para o projeto e, se um hub existente for sugerido, selecione a opção para criar um *novo*. 
 
-1. Na home page, clique em **+ Criar um agente**.
-
-1. No assistente **Criar um agente**, insira um nome válido para o projeto. 
-
-1. Clique em **Opções avançadas** e especifique as seguintes configurações:
-    - **Recurso da Fábrica de IA do Azure**: *manter o nome padrão*
-    - **Assinatura**: *sua assinatura do Azure*
-    - **Grupo de recursos**: *criar ou selecionar um grupo de recursos*
+1. Expanda *Opções avançadas* para especificar as seguintes configurações para o projeto:
+    - **Assinatura:** sua assinatura do Azure
+    - **Grupo de recursos**: crie ou selecione um grupo de recursos
     - **Região**: selecione um dos seguintes locais:
         * Leste dos EUA
         * França Central
@@ -34,17 +29,13 @@ Vamos começar criando um projeto da Fábrica de IA do Azure.
         * Europa Ocidental
         * Oeste dos EUA
 
-1. Clique em **Criar** e revise a configuração. Aguarde a conclusão do processo de configuração.
+    Aguarde a criação do projeto e do hub.
 
-    >**Observação**: se você receber um erro de permissões, clique no botão **Corrigir** para adicionar as permissões apropriadas para continuar.
-
-1. Quando o projeto for criado, o playground Agentes abrirá por padrão no portal da Portal da Fábrica de IA do Azur, que será semelhante à imagem a seguir:
-
-    ![Captura de tela dos detalhes de um projeto IA do Azure no Portal da Fábrica de IA do Azure.](./media/ai-foundry-project-2.png)
-
-1. Em uma nova janela do navegador, abra a [página de exploração de Serviços de IA do Azure](https://ai.azure.com/explore/aiservices).
+1. Quando o projeto for criado, a página *Visão geral* dos detalhes do projeto abrirá. No menu esquerdo, selecione **Serviços de IA**. 
 
 1. Na página *Serviços de IA*, clique no bloco *Visão + Documento* para experimentar os recursos Visão de IA do Azure e Documento.
+
+    ![Captura de tela do bloco Visão + Documento na Fábrica de IA do Azure.](./media/vision-document-tile.png)
 
 ## Analisar um recibo com a IA do Azure para Informação de Documentos na Fábrica de IA do Azure 
 

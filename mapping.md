@@ -12,10 +12,11 @@ O subconjunto de laboratórios AI-900 usado neste curso é mapeado por módulo c
 
 | Laboratório de treinamento AI-900 # | Tópico | Instruções |
 | --- | --- | --- |
-| Visão geral da IA AI-900 | Explorar os Serviços de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250253) |
-| Pesquisa Visual Computacional AI-900 | Analisar imagens na Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250145) |
-| Processamento de Linguagem Natural AI-900 | Analisar texto com a Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250314) |
-| Informação de Documentos AI-900 | Extrair dados de formulário na Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250315) |
-| IA Generativa AI-900 | Explorar a IA generativa na Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| IA Generativa AI-900 | Explorar a IA generativa no Portal da Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| Processamento de Linguagem Natural AI-900 | Analisar texto com o portal da Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250314) |
+| AI-900 Fala | Explorar a Fala no Portal da Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250148) |
+| Pesquisa Visual Computacional AI-900 | Analisar imagens no Portal da Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2250145) |
+| AI-900 Extração de informações | Extrair dados com compreensão de conteúdo no portal da Fábrica de IA do Azure | [Instruções para o laboratório](https://go.microsoft.com/fwlink/?linkid=2320420) |
+
 
 

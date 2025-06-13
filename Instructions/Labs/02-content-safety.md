@@ -35,9 +35,7 @@ Para incorporar os serviços de IA do Azure em aplicativos, os desenvolvedores p
 
 Vamos começar criando um projeto da Fábrica de IA do Azure.
 
-1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
-
-    ![Captura de tela da home page da Fábrica de IA do Azure com "Criar um agente" selecionado.](./media/azure-ai-foundry-home-page.png)
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar.
  
 1. Em uma nova janela do navegador, abra a [página de exploração de Serviços de IA do Azure](https://ai.azure.com/explore/aiservices).
 
