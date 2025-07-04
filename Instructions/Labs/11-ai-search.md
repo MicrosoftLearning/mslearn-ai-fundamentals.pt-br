@@ -177,8 +177,6 @@ Depois de ter os documentos armazenados, você pode usar a Pesquisa de IA do Azu
 
 1. Mantenha o **Agendamento** definido como **Uma vez**.
 
-1. Expanda as **Opções avançadas**. Verifique se a opção **Chaves de codificação de Base 64** está selecionada, pois as chaves de codificação podem tornar o índice mais eficiente.
-
 1. Escolha **Enviar** para criar a fonte de dados, o conjunto de habilidades, o índice e o indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
     - Extrai os campos de metadados do documento e o conteúdo da fonte de dados.
     - Executa o conjunto de habilidades cognitivas para gerar mais campos enriquecidos.
