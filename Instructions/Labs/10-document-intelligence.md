@@ -13,37 +13,29 @@ Neste exercício, você usará os modelos predefinidos da IA do Azure para Infor
 
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-1. Em uma guia do navegador, navegue até a [Fábrica de IA do Azure](https://ai.azure.com?azure-portal=true).
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar. 
 
-1. Entre com sua conta. 
+1. No navegador, navegue até `https://ai.azure.com/managementCenter/allResources` e clique em **Criar**. Em seguida, escolha a opção para criar um novo *Recurso do hub de IA*.
 
-1. Na home page do portal da Fábrica de IA do Azure, selecione **Criar um projeto**. Na Fábrica de IA do Azure, os projetos são contêineres que ajudam a organizar o trabalho.  
+1. No assistente *Criar projeto*, insira um nome válido para o projeto e, se um hub existente for sugerido, selecione a opção para criar um *novo*. 
 
-    ![Captura de tela da home page da Fábrica de IA do Azure com "Criar um projeto" selecionado.](./media/azure-ai-foundry-home-page.png)
+1. Expanda *Opções avançadas* para especificar as seguintes configurações para o projeto:
+    - **Assinatura:** sua assinatura do Azure
+    - **Grupo de recursos**: crie ou selecione um grupo de recursos
+    - **Região**: selecione um dos seguintes locais:
+        * Leste dos EUA
+        * França Central
+        * Coreia Central
+        * Europa Ocidental
+        * Oeste dos EUA
 
-1. No painel *Criar um projeto*, você verá um nome de projeto gerado, que pode ser mantido como está. Caso tenha criado um hub no passado, você verá uma lista de *novos* recursos do Azure a serem criados ou uma lista suspensa de hubs existentes. Se você vir a lista suspensa de hubs existentes, selecione *Criar novo hub*, crie um nome exclusivo para seu hub e selecione *Avançar*.  
- 
-    ![Captura de tela do painel criar um projeto com nomes gerados automaticamente para hub e projeto.](./media/azure-ai-foundry-create-project.png)
+    Aguarde a criação do projeto e do hub.
 
-> **Importante**: você precisará de um recurso de serviços de IA do Azure provisionado em um local específico para concluir o restante do laboratório.
+1. Quando o projeto for criado, a página *Visão geral* dos detalhes do projeto abrirá. No menu esquerdo, selecione **Serviços de IA**. 
 
-1. No mesmo painel *Criar um projeto*, selecione **Personalizar** e selecione um dos seguintes **locais**: Leste dos EUA, França Central, Coreia Central, Oeste da Europa ou Oeste dos EUA para concluir o restante do laboratório. Em seguida, selecione **Criar**. 
+1. Na página *Serviços de IA*, clique no bloco *Visão + Documento* para experimentar os recursos Visão de IA do Azure e Documento.
 
-1. Anote os recursos criados: 
-- Serviços de IA do Azure
-- Hub de IA do Azure
-- Projeto de IA do Azure
-- Conta de armazenamento
-- Key vault
-- Grupo de recursos  
- 
-1. Depois que os recursos forem criados, a página *Visão geral* do projeto abrirá. No menu à esquerda da tela, selecione **Serviços de IA**.
- 
-    ![Captura de tela do menu à esquerda da tela do projeto com os Serviços de IA selecionados.](./media/azure-ai-foundry-ai-services.png)  
-
-1. Na página *Serviços de IA*, clique no bloco *Visão + Documento* para experimentar as funcionalidades da IA do Azure para Informação de Documentos.
-
-    ![Captura de tela do bloco Visão e Documento selecionado na página Serviços de IA.](./media/vision-document-tile.png)
+    ![Captura de tela do bloco Visão + Documento na Fábrica de IA do Azure.](./media/vision-document-tile.png)
 
 ## Analisar um recibo com a IA do Azure para Informação de Documentos na Fábrica de IA do Azure 
 
