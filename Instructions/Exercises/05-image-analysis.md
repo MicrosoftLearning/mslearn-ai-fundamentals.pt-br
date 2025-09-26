@@ -11,82 +11,82 @@ Por exemplo, suponha que o varejista fictício *Northwind Traders* tenha decidid
 
 Este exercício levará aproximadamente **20** minutos.
 
+## Baixar e extrair arquivos de imagem
+
+1. Baixe **[image-analysis.zip](https://aka.ms/mslearn-images-for-analysis)** de `https://aka.ms/mslearn-images-for-analysis`.
+1. Extraia o arquivo de .zip baixado para uma pasta em seu computador.
+
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar. 
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
 
-1. No navegador, navegue até `https://ai.azure.com/managementCenter/allResources` e clique em **Criar**. Em seguida, escolha a opção para criar um **Recurso do hub de IA**.
+    ![Captura de tela da home page do portal da Fábrica de IA do Azure.](./media/ai-foundry-portal.png)
 
-1. No assistente *Criar projeto*, insira um nome válido para o projeto e, se um hub existente for sugerido, selecione a opção para criar um *novo*. 
+1. Role até a parte inferior da página e selecione o bloco **Explorar os serviços de IA do Azure**.
 
-1. Expanda *Opções avançadas* para especificar as seguintes configurações para o projeto:
-    - **Assinatura:** sua assinatura do Azure
-    - **Grupo de recursos**: crie ou selecione um grupo de recursos
-    - **Região**: selecione um dos seguintes locais:
-        * Leste dos EUA
-        * França Central
-        * Coreia Central
-        * Europa Ocidental
-        * Oeste dos EUA
+    ![Captura de tela do bloco Explorar serviços de IA do Azure.](./media/ai-services.png)
 
-    Selecione **Criar**. Aguarde a criação do projeto e do hub. Isso pode levar alguns minutos.
+1. Na página Serviços de IA do Azure, selecione o bloco **Visão + Documento**.
 
-1. Quando o projeto for criado, a página *Visão geral* dos detalhes do projeto abrirá. No menu esquerdo, selecione **Serviços de IA**. 
+    ![Captura de tela do bloco Visão + Documento.](./media/vision-tile.png)
 
-    >*Observação*: Expanda o menu para ler seu conteúdo clicando no ícone "expandir" superior. 
+1. Na página **Visão + Documento**, exiba a guia **Imagem** e selecione o bloco **Legenda de imagem**.
 
-1. Na página *Serviços de IA*, clique no bloco *Visão + Documento* para experimentar os recursos Visão de IA do Azure e Documento.
+    ![Captura de tela do bloco Legenda de imagem.](./media/image-captioning-tile.png)
 
-    ![Captura de tela do bloco Visão + Documento na Fábrica de IA do Azure.](./media/vision-document-tile.png)
+1. No painel **Adicionar legendas a imagens**, use o botão **selecionar um hub** para **criar um novo hub** com as seguintes configurações:
+    - **Nome do hub**: *Insira um nome válido para o hub.*
+    - **Assinatura**: *sua assinatura do Azure*
+    - **Grupo de recursos**: *criar ou selecionar um grupo de recursos*
+    - **Localização**: *Selecione um dos seguintes locais**/:
+        - Leste dos EUA
+        - França Central
+        - Coreia Central
+        - Europa Ocidental
+        - Oeste dos EUA
+    - **Conectar os serviços de IA do Azure**: *Criar um novo recurso dos serviços de IA do Azure com um nome válido*
+    - **Conectar-se à Pesquisa de IA do Azure**: Ignorar a conexão
+
+    \**No momento em que este artigo está sendo escrito, há suporte para a Visão de IA do Azure em hubs nas seguintes regiões*.
+
+1. Quando o hub for criado, você será solicitado a criar um projeto. Insira um nome adequado para o projeto e selecione **Criar projeto**.
 
 ## Gerar legendas para uma imagem
 
 Vamos usar a funcionalidade de legenda de imagem da Visão de IA do Azure para analisar imagens tiradas por uma câmera na loja *Northwind Traders*. As legendas de imagem estão disponíveis por meio dos recursos **Legenda** e **Legendas Densas**.
 
-1. Na página *Visão + Documento*, role para baixo e selecione **Imagem** em *Exibir todos os outros recursos de visão*. Em seguida, selecione o bloco **Legenda de imagem**.
+1. No painel de tarefas à esquerda, selecione **Serviços de IA**.
 
-    ![Captura de tela do bloco de legenda de imagem na seção de imagem da página Visão e Documento.](./media/vision-image-captioning-tile.png)
+    *Agora você precisa repetir as etapas usadas anteriormente para voltar à interface da legenda de imagem e usar seu novo projeto baseado no hub.*
 
-1. Na página **Adicionar legendas a imagens**, abaixo do menu de seleção *Serviços de IA do Azure conectados*, observe que o recurso *Serviços de IA do Azure* que você criou foi selecionado. Você não precisará fazer nenhuma alteração. 
+1. Na página **Serviços de IA**, selecione o bloco **Visão + Documento**. Em seguida, na página **Visão + Documento**, na guia **Imagem**, selecione o bloco **Legenda de imagem**.
 
-    >*Observação*: se você não personalizou um local de recurso válido anteriormente durante a criação do recurso, poderá ser solicitado que você crie um novo recurso de serviços de IA do Azure que esteja em uma região válida. Você precisará criar o novo recurso para continuar o laboratório.  
+1. Na página **Adicionar legendas a imagens**, no menu de seleção de *Serviços de IA do Azure Conectados*, verifique se o recurso de serviços de IA do Azure que você criou em seu hub está selecionado.
 
-1. Baixe **image-analysis.zip** abrindo a URL `https://aka.ms/mslearn-images-for-analysis` em uma nova guia do navegador. Usar a URL deve baixar automaticamente uma pasta no seu computador. 
-
-1. Navegue até a pasta *Downloads* em seu computador e identifique a pasta baixada. Clique com o botão direito do mouse na pasta baixada. Selecione *Extrair Tudo...*. Em seguida, selecione *Extrair* para descompactar seu conteúdo. A pasta descompactada será exibida na tela.  
-
-1. Na pasta descompactada, localize o arquivo chamado **store-camera-1.jpg**; que contém a seguinte imagem:
-
-    ![Imagem de um pai usando uma câmera de celular para tirar uma foto do filho em uma loja](./media/analyze-images-vision/store-camera-1.jpg)
-
-1. Carregue a imagem **store-camera-1.jpg** selecionando *Procurar um arquivo*. Você pode encontrar a imagem na pasta *Downloads* do sistema de arquivos.
+1. Use o link **Procurar um arquivo** para carregar a imagem **store-camera-1.jpg** dos arquivos que você baixou e extraiu anteriormente.
 
 1. Observe o texto de legenda gerado, visível no painel **Atributos detectados** à direita da imagem.
 
+    ![Captura de tela da página Adicionar legendas a imagens com uma imagem analisada.](./media/image-captioning.png)
+
     A funcionalidade **Legenda** fornece uma única frase em inglês legível por humanos que descreve o conteúdo da imagem.
 
-1. Em seguida, use a mesma imagem para executar **Legendas densas**. Retorne à página **Visão + Documento** clicando na seta de *voltar* na parte superior da página. Na página *Visão + Documento*, selecione a guia **Imagem** e, em seguida, selecione o bloco **Legendas densas**.
+1. Em seguida, use a mesma imagem para executar **Legendas densas**. Retorne à página **Visão + Documento** selecionando a seta de **&larr;** *voltar* no topo da página. Em seguida, na página **Visão + Documento**, na guia **Imagem**, selecione o bloco **Legendas densas**.
 
     O recurso **Legendas Densas** difere da capacidade **Legenda**, pois fornece várias legendas legíveis por humanos para uma imagem, uma descrevendo o conteúdo da imagem e outras, cada uma cobrindo os objetos essenciais detectados na imagem. Cada objeto detectado inclui uma caixa delimitadora, que define as coordenadas de pixel dentro da imagem associada ao objeto.
 
-1. Passe o mouse sobre uma das legendas na lista de atributos **Detectados** e observe o que acontece dentro da imagem.
+1. Carregue a imagem **store-camera-1.jpg** novamente e visualize os resultados de legendas densas.
 
-    ![A imagem e suas legendas são exibidas.](./media/analyze-images-vision/dense-captioning.png)
+    ![Captura de tela dos resultados de legendas densas.](./media/dense-captioning.png)
 
-    Mova o cursor do mouse sobre as outras legendas da lista e observe como a caixa delimitadora muda na imagem para realçar a parte da imagem usada para gerar a legenda.
+    Passe o mouse sobre qualquer uma das legendas na lista de **Atributos detectados** e observe que uma legenda é gerada para cada objeto detectado na imagem.
 
 ## Marcar imagens 
 
 O próximo recurso que você experimentará é a funcionalidade *Extrair Marcas*. A funcionalidade Extrair marcas é baseada em milhares de objetos reconhecíveis, incluindo seres vivos, cenários e ações.
 
-1. Retorne à página *Visão + Documento* da Fábrica de IA do Azure, selecione a guia **Imagem** e selecione o bloco **Extração de marca comum**.
-
-1. Abra a pasta que contém as imagens que você baixou e localize o arquivo chamado **store-image-2.jpg**, que tem esta aparência:
-
-    ![Imagem de uma pessoa com uma cesta de compras em um supermercado](./media/analyze-images-vision/store-camera-2.jpg)
-
-1. Carregue o arquivo **store-camera-2.jpg** .
-
+1. Retorne à página **Visão + Documento** clicando na seta de **&larr;** *voltar* na parte superior da página. Em seguida, na página **Visão + Documento**a guia **Imagem**, selecione o bloco **Extração de marcas comuns**.
+1. Carregue o arquivo **store-camera-2.jpg** da pasta extraída anteriormente.
 1. Examine a lista de marcas extraídas da imagem e a pontuação de confiança para cada uma no painel de atributos detectado. Aqui, a pontuação de confiança é a probabilidade de que o texto do atributo detectado descreva o que realmente está na imagem. Observe na lista de marcas que ele inclui não apenas objetos, mas ações, como *compras*, *vendas*e *pendente*.
 
     ![Uma captura de tela do painel detectar atributos no Vision Studio com pontuações de texto e de confiança exibidas ao lado da imagem original.](./media/analyze-images-vision/detect-attributes.png)
@@ -95,26 +95,22 @@ O próximo recurso que você experimentará é a funcionalidade *Extrair Marcas*
 
 Nessa tarefa, você usará o recurso de **Detecção de objeto** da Análise de Imagem. A detecção de objetos detecta e extrai caixas delimitadoras com base em milhares de objetos e seres vivos reconhecíveis .
 
-1. Retorne à página *Visão + Documento* da Fábrica de IA do Azure, selecione a guia **Imagem** e selecione o bloco **Detecção de objeto comum**.
-
-1. Abra a pasta que contém as imagens que você baixou e localize o arquivo chamado **store-camera-3.jpg**, que tem essa aparência:
-
-    ![Imagem de uma pessoa com um carrinho de compras](./media/analyze-images-vision/store-camera-3.jpg)
+1. Retorne à página **Visão + Documento** clicando na seta de **&larr;** *voltar* na parte superior da página. Em seguida, na guia **Imagem**, selecione o bloco **Detecção de objetos comuns**.
 
 1. Carregue o arquivo **store-camera-3.jpg**.
 
 1. Na caixa **Atributos Detectados**, observe a lista de objetos detectados e suas pontuações de confiança.
 
-1. Passe o cursor do mouse sobre os objetos na lista de **Atributos detectados** para realçar a caixa delimitadora do objeto na imagem.
+    ![Captura de tela dos resultados de legendas densas.](./media/object-detection.png)
 
-1. Mova o controle deslizante **Valor de limite** até que um valor de 70 seja exibido à direita do controle deslizante. Observe o que acontece com os objetos na lista. O controle deslizante de limite especifica que somente objetos identificados com uma pontuação de confiança ou probabilidade maior que o limite devem ser exibidos.
+1. Tente detectar os objetos em **store-camera-4.jpg**
 
 ## Limpeza
 
 Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita a geração de custos desnecessários.
 
 1. Abra o [portal do Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém os recursos que você criou. 
-1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1. Selecione **Excluir grupo de recursos** e, em seguida, **insira o nome do grupo de recursos** para confirmar. Em seguida, o grupo de recursos é excluído.
 
 ## Saiba mais
 
