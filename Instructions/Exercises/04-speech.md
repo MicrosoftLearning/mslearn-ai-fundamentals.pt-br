@@ -5,70 +5,78 @@ lab:
 
 # Explorar a Fala no Portal da Fábrica de IA do Azure
 
-O serviço de **Fala de IA do Azure** transcreve fala em texto, e texto em fala audível. Você pode usar a Fala de IA para criar um aplicativo capaz de transcrever anotações de reunião ou gerar texto a partir da gravação de entrevistas.
+A Fala de IA do Azure transcreve fala em texto e converte texto em fala audível. Você pode usar a Fala de IA para criar um aplicativo que transcreva notas de reuniões ou gere texto a partir de gravações de entrevistas, ou para dar suporte a um assistente de IA interativo capaz de responder a comandos e perguntas faladas.
 
-Neste exercício, você usará a Fala de IA do Azure no portal da Fábrica de IA do Azure, a plataforma da Microsoft para criar aplicativos inteligentes, para transcrever áudio usando as experiências de teste integradas. 
+Neste exercício, você irá usar a Fala de IA do Azure no portal da Fábrica de IA do Azure da plataforma da Microsoft para criar aplicativos inteligentes para explorar os principais recursos de Fala de IA do Azure. 
 
 Este exercício levará aproximadamente **15** minutos.
 
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar. 
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
 
-1. No navegador, navegue até `https://ai.azure.com/managementCenter/allResources` e clique em **Criar**. Em seguida, escolha a opção para criar um **recurso da Fábrica de IA do Azure**.
+    ![Captura de tela da home page do portal da Fábrica de IA do Azure.](./media/ai-foundry-portal.png)
 
-1. No assistente *Criar projeto*, insira um nome válido para o projeto.
+1. Role até a parte inferior da página e selecione o bloco **Explorar os serviços de IA do Azure**.
 
-1. Expanda *Opções avançadas* para especificar as seguintes configurações para o projeto:
-    - **Assinatura:** sua assinatura do Azure
-    - **Grupo de recursos**: crie ou selecione um grupo de recursos
-    - **Região**: selecione um dos seguintes locais:
-        * Leste dos EUA
-        * França Central
-        * Coreia Central
-        * Europa Ocidental
-        * Oeste dos EUA
+    ![Captura de tela do bloco Explorar serviços de IA do Azure.](./media/ai-services.png)
 
-    Selecione **Criar**. Aguarde até que seu projeto seja criado. Isso pode levar alguns minutos.
+1. Na página Serviços de IA do Azure, selecione o bloco **Fala**.
 
-1. Quando o projeto for criado, a página *Visão geral* dos detalhes do projeto abrirá.
- 
-1. No menu à esquerda da tela, selecione **Playgrounds**.
+    ![Captura de tela do bloco Fala.](./media/speech.png)
 
-    >*Observação*: Expanda o menu para ler seu conteúdo clicando no ícone "expandir" superior.
+1. Na página **Fala**, selecione **Ir para o playground de Fala**. Então, quando solicitado, crie um novo projeto com as seguintes configurações:
+    - **Nome do projeto**: *Insira um nome válido para seu projeto.*
+    - **Configurações avançadas**:
+        - **Assinatura**: *sua assinatura do Azure*
+        - **Grupo de recursos**: *criar ou selecionar um grupo de recursos*
+        - **Região**: *Selecione qualquer região **AI Foundry recommended***
+        - **Fábrica de IA ou OpenAI do Azure** *Criar um novo recurso da Fábrica de IA do Azure com um nome válido*
 
-1. Na página Playgrounds da Fábrica de IA do Azure, selecione **Experimentar o Playground de Fala**. O playground de Fala é uma interface do usuário que permite experimentar alguns recursos de Fala de IA do Azure.
+1. Selecione **Criar**. Aguarde até que seu projeto seja criado. Isso pode levar alguns minutos.
+
+1. Quando o projeto for criado, você será levado para um playground de **Fala** (caso não seja, no painel de tarefas à esquerda, selecione **Playgrounds** e abra o playground de Fala a partir daí.)
+
+    O playground de Fala é uma interface do usuário que permite experimentar alguns recursos de Fala de IA do Azure.  
 
 ## Explorar a conversão de fala em texto no Playground de Fala da Fábrica de IA do Azure
 
-Vamos testar a *conversão de fala em texto* no Playground Fala da Fábrica de IA do Azure. 
+Vamos testar a *conversão de fala em texto* no Playground Fala da Fábrica de IA do Azure.
 
-1. Na página *Fala*, role para baixo e selecione **Transcrição em tempo real**.
+1. Baixe **[speech.zip](https://aka.ms/mslearn-speech-files)** de `https://aka.ms/mslearn-speech-files` em uma nova guia no navegador. Depois de baixar o arquivo, extraia-o para uma pasta local. 
 
-1. Baixe **speech.zip** abrindo a URL `https://aka.ms/mslearn-speech-files` em uma nova guia do navegador. Usar a URL deve baixar automaticamente uma pasta no seu computador. 
+1. De volta ao portal da Fábrica de IA do Azure, na página Fala, na guia **Conversão de Fala em Texto**, selecione **Transcrição em tempo real**.
 
-1. Navegue até a pasta *Downloads* em seu computador e identifique a pasta baixada. Clique com o botão direito do mouse na pasta baixada. Selecione *Extrair Tudo...*. Em seguida, selecione *Extrair* para descompactar seu conteúdo. A pasta descompactada será exibida na tela. Feche a pasta descompactada. Observe que a pasta descompactada agora também está na pasta *Downloads*.    
+1. Em **Carregar arquivos**, selecione **Procurar arquivos** e carregue **WhatAICanDo.m4a** da pasta em que ele foi baixado e extraído.
 
-1. No portal de Fala da Fábrica de IA do Azure, em *Carregar arquivos*, selecione **Procurar arquivos**. Navegue pela pasta descompactada. Selecione **WhatAICanDo.m4a** e **Abrir**.
+    O serviço de Fala transcreve e exibe o texto em tempo real. Se você tiver áudio no computador, poderá ouvir a gravação enquanto o texto estiver sendo transcrito.
 
-    ![Procurar arquivos](media/recognize-synthesize-speech/browse-files-speech.png)
-
-1. O serviço de Fala transcreve e exibe o texto em tempo real. Se você tiver áudio no computador, poderá ouvir a gravação enquanto o texto estiver sendo transcrito.
+    ![Captura de tela da interface de transcrição em tempo real no playground de Fala.](./media/real-time-transcription.png)
 
 1. Examine a saída. 
 
-    >*Observação*: Para ver a saída completa, talvez seja necessário minimizar o *painel Configurar*. Para minimizar, selecione o ícone à direita do título *Configurar*.
+    >*Dica*: Para ver a saída completa, talvez seja necessário minimizar o *painel Configurar*. Para minimizar, selecione o ícone à direita do título *Configurar*.
 
-1. Na saída, em *Texto*, você poderá ver o áudio transcrito em texto. 
+    Na saída, em **Texto**, você poderá ver o áudio transcrito em texto.
 
-Neste exercício, você experimentou os serviços de Fala de IA do Azure no Playground Fala da Fábrica de IA do Azure. Em seguida, você usou a Transcrição em tempo real para transcrever uma gravação de áudio. Você pôde ver a transcrição de texto sendo gerada à medida que o arquivo de áudio era reproduzido.
+## Explorar a conversão de texto em fala no playground de Fala da Fábrica de IA do Azure
 
-## Limpeza
+Agora vamos ver como a Fala de IA do Azure pode gerar fala audível a partir de texto.
+
+1. No playground de Fala, selecione a guia **Conversão de texto em fala** e verifique se **Galeria de voz** está selecionada.
+1. Visualize as vozes disponíveis e selecione uma (como *Ava Multilíngue*).
+1. No painel **Detalhes da voz**, selecione a guia **Experimentar**. Em seguida, insira algum texto (por exemplo, `The rain in Spain stays mainly in the plain`) e use o botão **Reproduzir** para sintetizar fala a partir do texto.
+
+    ![Captura de tela da interface Galeria de voz no playground de Fala.](./media/voice-gallery.png)
+
+    O texto é falado usando a voz selecionada. Você pode tentar outras vozes para comparar a saída falada.
+
+## Limpar
 
 Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita o acúmulo de custos desnecessários.
 
 1. Abra o [portal do Microsoft Azure]( https://portal.azure.com) e selecione o grupo de recursos que contém o recurso que você criou.
-1. Selecione o recurso e selecione **Excluir** e, em seguida, **Sim** para confirmar. Em seguida, o recurso é excluído.
+1. Selecione **Excluir grupo de recursos** e, em seguida, **insira o nome do grupo de recursos** para confirmar. Em seguida, o grupo de recursos é excluído.
 
 ## Saiba mais
 

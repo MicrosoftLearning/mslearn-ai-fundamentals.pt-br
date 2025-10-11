@@ -5,58 +5,59 @@ lab:
 
 # Explorar a IA generativa no Portal da Fábrica de IA do Azure
 
-A IA generativa descreve uma categoria de recursos dentro da IA que criam conteúdos. As pessoas normalmente interagem com a IA generativa que foi incorporada a aplicativos de chat. Neste exercício, você experimentará a IA generativa no portal da Fábrica de IA do Azure, a plataforma da Microsoft para criar aplicativos inteligentes. 
+A IA generativa descreve uma categoria de recursos dentro da IA que criam conteúdos. As pessoas geralmente interagem com IA generativa incorporada a aplicativos de chat. Neste exercício, você experimentará a IA generativa no portal da Fábrica de IA do Azure, a plataforma da Microsoft para criar aplicativos inteligentes. 
 
 Este exercício levará aproximadamente **20** minutos.
 
 ## Criar um projeto no portal do Foundry da IA do Azure
 
-1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar. 
+1. Em um navegador da Web, abra o [Portal da Fábrica de IA do Azure](https://ai.azure.com) em `https://ai.azure.com` e entre usando suas credenciais do Azure. Feche todas as dicas ou painéis de início rápido abertos na primeira vez que você entrar e, se necessário, use o logotipo da **Fábrica de IA do Azure** no canto superior esquerdo para navegar até a home page, que é semelhante à imagem a seguir (feche o painel **Ajuda** se estiver aberto):
 
-1. No navegador, navegue até `https://ai.azure.com/managementCenter/allResources` e clique em **Criar**. Em seguida, escolha a opção para criar um **recurso da Fábrica de IA do Azure**.
+    ![Captura de tela da home page do portal da Fábrica de IA do Azure.](./media/ai-foundry-portal.png)
 
-1. No assistente *Criar projeto*, insira um nome válido para o projeto.
+1. Na seção **Explorar modelos e capacidades**, pesquise `gpt-4o`. Em seguida, nos resultados da pesquisa, selecione o modelo **gpt-4o** para exibir seus detalhes.
 
-1. Expanda *Opções avançadas* para especificar as seguintes configurações para o projeto:
-    - **Assinatura:** sua assinatura do Azure
-    - **Grupo de recursos**: crie ou selecione um grupo de recursos
-    - **Região**: selecione um dos seguintes locais:
-        * Leste dos EUA
-        * França Central
-        * Coreia Central
-        * Europa Ocidental
-        * Oeste dos EUA
+    ![Captura de tela da página de detalhes do gpt-4o.](./media/gpt-4o-details.png)
 
-    Selecione **Criar**. Aguarde até que seu projeto seja criado. Isso pode levar alguns minutos.
+1. Selecione **Usar este modelo**.
 
-1. Quando o projeto for criado, a página *Visão geral* dos detalhes do projeto abrirá.
+1. No assistente **Criar projeto**, insira um nome válido para o projeto. Então, expanda **Opções avançadas** para especificar as seguintes configurações para seu projeto:
+    - **Recurso da Fábrica de IA do Azure**: *Insira um nome válido para o recurso da Fábrica de IA.*
+    - **Assinatura**: *sua assinatura do Azure*
+    - **Grupo de recursos**: *criar ou selecionar um grupo de recursos*
+    - **Região**: Selecione qualquer região **Recomendada para Fábrica de IA**\*
+    
+    \**As implantações de modelo são restritas por cotas regionais. Se você selecionar uma região na qual não houver cota disponível suficiente, poderá precisar escolher uma região alternativa para criar um novo recurso posteriormente.*
 
-1. No menu à esquerda da tela, selecione **Playgrounds**. 
+1. Selecione **Criar**. Aguarde até que seu projeto seja criado. Isso pode levar alguns minutos.
 
-    >*Observação*: Expanda o menu para ler seu conteúdo clicando no ícone "expandir" superior.
+    Se for solicitado que você implante o modelo em uma região diferente, use as configurações padrão para fazer isso.
 
 ## Explorar a IA generativa no playground de chat da Fábrica de IA do Azure
 
-1. Na página Playgrounds da Fábrica de IA do Azure, selecione **Experimentar o Playground Chat**. O Playground Chat é uma interface do usuário que permite que você teste a criação de um aplicativo de chat com diferentes modelos de IA generativa.  
+1. Depois que o projeto tiver sido criado, no painel de tarefas à esquerda, selecione **Playgrounds**. 
 
-    >*Observação*: Se você não vir o painel *Configuração* aparecer na tela do playground de chat, expanda o tamanho da janela.  
+    >*Dica*: Se necessário, expanda o menu para ler seu conteúdo clicando no ícone "expandir" superior.
 
-1. Para usar o Playground Chat, você precisa associá-lo a um modelo implantado. No painel *Configuração* do playground de chat, selecione **+ Criar uma implantação**. Se solicitado, selecione *De modelos base*, caso contrário, continue para a próxima etapa. 
+1. Na página Playgrounds da Fábrica de IA do Azure, selecione **Experimentar o Playground Chat**. Feche as dicas ou os painéis de início rápido abertos.
 
-1. Pesquise o modelo **gpt-4o** e selecione **Confirmar**. Mantenha o nome do modelo, o tipo de implantação e os detalhes da implantação padrão. Em seguida, selecione **Implantar**.
+    O Playground Chat é uma interface do usuário que permite que você teste a criação de um aplicativo de chat com diferentes modelos de IA generativa.
 
-1. No playground chat, você pode usar o modelo implantado quando ele aparecer no menu de seleção *Implantação*. Feche as dicas ou os painéis de início rápido abertos. 
+    ![Captura de tela da página de detalhes do gpt-4o.](./media/chat-playground.png)
 
-    >*Observação*: Você precisa selecionar **Aplicar alterações** sempre que fizer alterações na *Configuração*. 
+    >*Dica*: Se você não vir o painel **Configuração** na tela do playground de chat, expanda o tamanho da janela.  
 
-1. Navegue até o painel *Histórico de chats*. Você usará a caixa de consulta para inserir seus prompts. 
+1. Para usar o Playground Chat, você precisa associá-lo a um modelo implantado. No painel **Configuração** do playground de chat, verifique se o modelo **gpt-4o** implantado anteriormente está selecionado. 
 
-1. Considere as seguintes maneiras de melhorar as respostas de um assistente de IA generativa:
-    - Comece com uma meta específica para o que você deseja que o assistente faça
-    - Iterar com base em solicitações e respostas anteriores para refinar o resultado
-    - Forneça uma fonte para aterrar a resposta em um escopo específico de informações
-    - Adicionar contexto para maximizar a adequação e a relevância da resposta
-    - Definir expectativas claras para a resposta
+    >*Observação*: Você precisa selecionar **Aplicar alterações** sempre que fizer alterações no painel **Configuração**.
+
+1. No painel **Configuração**, observe as instruções padrão e o contexto do modelo, que devem ser semelhantes a:
+
+    `You are an AI assistant that helps people find information.`
+
+    Esse tipo de instrução é comumente chamado de *prompt do sistema* e é usado para fornecer diretrizes e restrições às respostas do modelo.
+
+1. Revise o painel *Histórico de chats*, que contém alguns prompts de exemplo para ajudá-lo a começar e uma caixa de consulta para inserir seus próprios prompts. 
 
 1. Vamos tentar gerar uma resposta usando um prompt com um objetivo específico. Na caixa de chat, insira o seguinte prompt:
 
@@ -64,26 +65,26 @@ Este exercício levará aproximadamente **20** minutos.
     I'm planning a trip to Paris in September. Can you help me?
     ```
 
-1. Analise a resposta. **Observação**: tenha em mente que a resposta específica recebida pode variar devido à natureza da IA generativa.
- 
+1. Analise a resposta. Lembre-se de que a resposta específica que você receber pode variar devido à natureza da IA generativa.
+
 1. Vamos tentar outro prompt. Insira o seguinte:
 
     ```prompt
-    Where's a good location in Paris to stay? 
+    Where's a good location in the city to stay?
     ```
 
-1. Revise a resposta, que fornecerá alguns lugares para ficar em Paris.
+1. Revise a resposta, que fornecerá alguns lugares para ficar em Paris. Observe que a sessão de chat mantém o contexto dos prompts anteriores, portanto ela sabe que “a cidade” em questão é Paris.
 
 1. Vamos iterar com base em prompts e respostas anteriores para refinar o resultado Digite a seguinte solicitação:
-    
+
     ```prompt
     Can you give me more information about dining options near the first location?
-    ``` 
+    ```
 
 1. Revise a resposta, que fornecerá opções de alimentação perto de um local da resposta anterior. 
 
 1. Agora, vamos fornecer uma fonte para basear a resposta em um escopo específico de informações. Insira o seguinte: 
-    
+
     ```prompt
     Based on the information at https://en.wikipedia.org/wiki/History_of_Paris, what were the key events in the city's history?
     ```
@@ -99,19 +100,25 @@ Este exercício levará aproximadamente **20** minutos.
 1. Revise a resposta e a argumentação da resposta.  
 
 1. Agora, tente definir expectativas claras para a resposta. Digite a seguinte solicitação:
-    
+
     ```prompt
     What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
     ```
 
 1. Revise a resposta, que fornecerá uma lista numerada de pontos turísticos para ver em Paris.
 
-1. Quando terminar, você pode fechar a janela do navegador.
+## Exibir o código do cliente
+
+1. Na parte superior da página Playground de chats, selecione **Exibir código**.
+1. Revise os código de exemplo, que são fornecidos para várias linguagens de programação, SDKs e opções de autenticação.
+
+    Esses códigos de exemplo podem ajudar os desenvolvedores a começar rapidamente ao criar aplicativos cliente que interajam com seu modelo implantado.
+
+1. Feche a janela do código de exemplo.
 
 ## Limpeza
 
 Se você não pretende fazer mais exercícios, exclua todos os recursos de que não precisa mais. Isso evita a geração de custos desnecessários.
 
 1. Abra o **portal do Azure** em [https://portal.azure.com](https://portal.azure.com) e selecione o grupo de recursos que contém os recursos que você criou.
-
-1. Selecione os recursos, clique em **Excluir** e, em seguida, em **Sim** para confirmar. Os recursos serão excluídos.
+1. Selecione **Excluir grupo de recursos** e, em seguida, **insira o nome do grupo de recursos** para confirmar. Em seguida, o grupo de recursos é excluído.
