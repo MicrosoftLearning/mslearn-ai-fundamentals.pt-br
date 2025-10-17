@@ -54,7 +54,7 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
 
    **Tipo de tarefa e dados**:
     
-    >**OBSERVAÇÃO**: Algumas assinaturas têm permissões que não permitem que o *bike-data* seja adicionado ao *workspaceblobstore*. Se você encontrar esse problema, atualmente é necessário ou mudar para uma assinatura pessoal, ou ajustar as permissões da sua assinatura. 
+    >**OBSERVAÇÃO**: Algumas assinaturas têm permissões que não permitem que o *bike-data* seja adicionado ao *workspaceblobstore*. Se você encontrar esse problema, precisará alternar para outra assinatura.
 
     - **Selecionar tipo de tarefa**: regressão
     - **Selecionar os dados**:
