@@ -53,6 +53,8 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
     - **Marcas**: *nenhuma*
 
    **Tipo de tarefa e dados**:
+    
+    >**OBSERVAÇÃO**: Algumas assinaturas têm permissões que não permitem que o *bike-data* seja adicionado ao *workspaceblobstore*. Se você encontrar esse problema, precisará alternar para outra assinatura.
 
     - **Selecionar tipo de tarefa**: regressão
     - **Selecionar os dados**:
@@ -69,6 +71,7 @@ O aprendizado de máquina automatizado permite que você experimente vários alg
             - **Seleção de MLtable**:
                 - *Baixe e descompacte a [pasta bike-data](https://aka.ms/bike-rentals) de `https://aka.ms/bike-rentals`.*
                 - **Carregar pasta**: *carregue a pasta **bike-data** extraída, que contém os arquivos de definição de tabela e dados necessários para o conjunto de dados de treinamento.*
+                - **Observação**: *se você encontrar uma mensagem para ignorar a validação de dados para continuar, selecione a opção para ignorar a validação de dados.*
         - Selecione o ativo de dados recém-criado **bike-rentals** e continue definindo o trabalho de ML automatizado na próxima página (**Configurações da tarefa**).
 
     **Configurações da tarefa**:
